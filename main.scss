@@ -144,6 +144,7 @@ section {
     margin: 20px;
     background-color: $color-white;
     border-radius: 10px;
+    overflow: hidden;
     & a{
         text-decoration: none;
         color: black;
@@ -162,4 +163,25 @@ section {
     display: flex;
     justify-content: center;
     margin-top: -20px;
+}
+
+@mixin imagesresto {
+    
+    width: 270px;
+    height: 200px;
+    position: relative;
+}
+.img{
+    &_resto{
+    @include imagesresto;
+    left: -45px;
+    top: -65px;
+    &--modifier{
+        @include imagesresto;
+        height: 350px;
+        left: -50px;
+        top: -140px;
+        }
+    }
+    
 }
