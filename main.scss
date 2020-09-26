@@ -22,7 +22,8 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-white: #FFF;
 $color-grey-light: #e4dede;
-$color-grey-dark: #d1d0d0;
+$color-grey-medium: #d1d0d0;
+$color-grey-dark: #444444;
 
 /*header*/
 .logo{
@@ -36,7 +37,7 @@ $color-grey-dark: #d1d0d0;
 .recherche{                     /*pq marge à droite et gauche ?? Centrer icone et barre*/
     width: 100%;
     height: 50px;
-    background-color:  $color-grey-dark;
+    background-color:  $color-grey-medium;
     box-shadow: 2px 2px 5px #9c9a9a inset;
     line-height: 50px;
     padding-left: 85px;
@@ -47,8 +48,8 @@ $color-grey-dark: #d1d0d0;
     & .search {
         width: 50%;
         font-size: 13px;
-        background-color: $color-grey-dark;
-        border: 1px solid  $color-grey-dark;
+        background-color: $color-grey-medium;
+        border: 1px solid  $color-grey-medium;
         @include police1;
     }
 }
@@ -141,6 +142,7 @@ section {
 .restaurant{
     border: 1px solid red;
     width: 85%;
+    height: 250px;
     margin: 20px;
     background-color: $color-white;
     border-radius: 10px;
@@ -162,11 +164,9 @@ section {
     line-height: 30px;
     display: flex;
     justify-content: center;
-    margin-top: -20px;
 }
 
 @mixin imagesresto {
-    
     width: 270px;
     height: 200px;
     position: relative;
@@ -182,6 +182,64 @@ section {
         left: -50px;
         top: -140px;
         }
+    }   
+}
+@mixin figcaption{
+    border: 1px solid red;
+    width: 80%;
+    left: 30px;
+    background-color: none;  /*mettre en blanc*/
+    position: absolute;
+}
+.figcap-1{
+    @include figcaption;
+    top: 940px;
+    &-2{
+        @include figcaption;
+        top: 1210px;
     }
-    
+    &-2-3{
+        @include figcaption;
+        top: 1485px;
+    }
+    &-2-3-4{
+        @include figcaption;
+        top: 1755px;
+    }
+}
+figcaption p{
+    border: 1px solid blue;
+    margin: 0px;
+    @include police2;
+}
+
+
+/*footer*/
+footer{
+    background-color: $color-grey-dark;
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    & h3 {
+        @include police1;
+        color: $color-white;
+    }
+}
+footer ul{
+    & li{
+        list-style-type: none;
+        margin-left: -40px;
+        margin-bottom: 10px;
+        @include police2;
+        & a{
+            text-decoration: none;
+            color: $color-white;
+        }
+    }
+    & i {
+        width: 12px;
+        font-size: 13px;
+        margin-right: 10px;
+    }
 }
