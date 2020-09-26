@@ -142,7 +142,6 @@ section {
         margin-top: 60px;
     }
     & .restaurant{
-        border: 1px solid green;
         width: 85%;
         height: 220px;
         margin-left: 20px;
@@ -161,7 +160,7 @@ section {
         & p {
             font-size: 14px;
             margin: 0px;
-            margin-top: 5px;
+            margin-top: 2px;
         }
     }
     & a{
@@ -191,7 +190,7 @@ section {
 }
 @mixin figcaption{
     width: 100%;
-    height: 70px;               /*a supp ??*/
+    height: 80px;               /*a supp ??*/
     display: flex;
     align-items: center;
     background-color: $color-white;  /*mettre en blanc*/
@@ -199,10 +198,10 @@ section {
 }
 .figcap-1{
     @include figcaption;
-    top: -55px;
+    top: -87px;
     &-2{
         @include figcaption;
-        top: -210px;
+        top: -240px;
     }
     &-2-3{
         @include figcaption;
@@ -218,7 +217,7 @@ section {
     margin: 0px;
     margin-right: 20%;
     padding-left: 10px;
-    padding-top: 20px;
+    padding-top: 15px;
     width: 60%;
     height: 70px;
     @include police2;
@@ -229,33 +228,28 @@ section {
     & i{
         font-size: 25px;
         color: $color-grey-dark;
+        margin-top: -20px;
     }
 }
-.nouveau1{
+@mixin bouton-nouveau{
     width: 80px;
     height: 30px;
     position: relative;
     border: 1px solid $color-tertiary;
     background: $color-tertiary;
     color: green;
-    top: -190px;
     right: -170px;
     line-height: 30px;
     display: flex;
     justify-content: center;
 }
+.nouveau1{
+    @include bouton-nouveau;
+    top: -190px;
+}
 .nouveau2{
-    width: 80px;
-    height: 30px;
-    position: relative;
-    border: 1px solid $color-tertiary;
-    background: $color-tertiary;
-    color: green;
+    @include bouton-nouveau;
     top: -340px;
-    right: -170px;
-    line-height: 30px;
-    display: flex;
-    justify-content: center;
 }
 
 
