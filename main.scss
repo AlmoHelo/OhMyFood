@@ -133,13 +133,13 @@ nav {
 /*section*/
 section {
     width: 100%;
-    height: auto;
     background-color: $color-grey-light;
+    padding-bottom: 50px;
     @include police2;
     & h2{
         @include titreh2;
         margin-left: 20px;
-        margin-top: 60px;
+        padding-top: 50px;
     }
     & .restaurant{
         width: 85%;
@@ -149,6 +149,7 @@ section {
         background-color: $color-white;
         border-radius: 10px;
         overflow: hidden;
+        box-shadow: 2px 2px 6px $color-grey-medium;
     }
     & figure {
         width: 100%;
@@ -156,7 +157,6 @@ section {
         margin: 0px;
         background-color: $color-white;
         border-radius: 10px;
-        overflow: visible;
         & p {
             font-size: 14px;
             margin: 0px;
