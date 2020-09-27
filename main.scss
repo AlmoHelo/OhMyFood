@@ -537,4 +537,80 @@ nav {
         }
     }
 }
+/*section*/
+section {
+    & h2{
+        font-size: 35px;
+    }
+    & .restaurant{
+        width: 40%;
+        height: 220px;    
+    }
+    & figure {
+        width: 96%;
+        height: 215px;
+        & p {
+            font-size: 18px;
+        }
+    }
+}
+@mixin imagesrestotablette {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.img{
+    &_resto{
+    @include imagesrestotablette;
+    top: -40px;
+    &--modifier{
+        @include imagesrestotablette;
+        height: 350px;
+        top: -115px;
+        }
+    }   
+}
+@mixin figcaption{
+    height: 70px;     
+    padding-top: 15px;
+}
+.figcap-1{
+    @include figcaption;
+    top: -97px;
+    &-2{
+        @include figcaption;
+        top: -250px;
+    }
+    &-2-3{
+        @include figcaption;
+        top: -65px;
+    }
+    &-2-3-4{
+        @include figcaption;
+        top: -65px;
+    }
+}
+.figcap{
+    &_texte{
+    padding-left: 20px;
+    height: 70px;
+    }
+    & i{
+        font-size: 30px;   
+    }
+}
+@mixin bouton-nouveau-tablette{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    right: -215px;
+}
+.nouveau1{
+    @include bouton-nouveau-tablette;
+    top: -185px;
+}
+.nouveau2{
+    @include bouton-nouveau-tablette;
+    top: -330px;
+}
 }
