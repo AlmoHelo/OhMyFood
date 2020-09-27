@@ -97,13 +97,15 @@ header{
 }
 .texte{
     height: 65px;
+    & p{
+        margin-bottom: -10px;
+    }
         &_gras{
             font-weight: bold;
-            margin-bottom: 8px;
             &--modifier{
                 font-weight: bold;
                 position: relative;
-                top:-40px;
+                top:-25px;
                 right: -305px;
             }
         }
