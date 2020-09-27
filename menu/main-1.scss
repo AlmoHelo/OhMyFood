@@ -83,6 +83,10 @@ header{
         padding-bottom: 10px;
         border-bottom: 4px solid $color-tertiary;
     }
+    & .liste{
+        border:1px solid red;
+        overflow: hidden;
+    }
     & li{
         list-style-type: none;
         margin-left: -40px;
@@ -160,3 +164,30 @@ footer ul{
         margin-right: 10px;
     }
 }
+/*animation*/
+.liste:hover{
+    transform-origin:bottom;
+    animation-name: liste;
+    animation-duration: 2000ms;
+    & li{
+        border: 1px solid green;
+    }
+}
+@keyframes liste{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity:.25;
+    }
+    50%{
+        opacity:.5;
+    }
+    75%{
+        opacity:.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
