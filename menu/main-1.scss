@@ -76,9 +76,12 @@ header{
     @include police2();
     margin-bottom: 30px;
     & h2{
+        width: 65px;
         font-size: 28px;
         font-weight: normal;
         margin-bottom: 40px;
+        padding-bottom: 10px;
+        border-bottom: 4px solid $color-tertiary;
     }
     & li{
         list-style-type: none;
