@@ -23,7 +23,7 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-white: #FFF;
 $color-grey: #d1d0d0;
-$color-grey-light: lighten($color-grey, 10%);
+$color-grey-light: lighten($color-grey, 15%);
 $color-grey-dark: darken($color-grey, 10%);
 
 /*header*/
@@ -238,8 +238,35 @@ section {
         font-size: 25px;
         color: $color-grey-dark;
         margin-top: -20px;
+        &:active{
+            background: linear-gradient($color-primary, $color-secondary);
+            border: none;
+            & > .progress-bar{
+                animation-name: heart 1000ms 150ms cubic-bezier(.9,0,.1,1);
+            }
+
+        }
     }
 }
+
+@keyframes heart {
+    0% {
+        transform: scaleY(0);
+    }
+    17% {
+        transform: scaleY(.18);
+    }
+    24% {
+        transform: scaleY(.4);
+    }
+    46% {
+        transform: scaleY(.81);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
 @mixin bouton-nouveau{
     width: 80px;
     height: 30px;
