@@ -1,0 +1,53 @@
+@font-face{
+    font-family: 'Shand';
+        src: url('polices/Shrikhand-Regular.otf');
+}
+@font-face{
+    font-family: 'Roboto';
+        src: url('polices/Roboto-Medium.ttf');
+}
+@mixin police1 {
+    font-family: "Shand", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+@mixin police2 {
+    font-family: "Roboto", "trebuchet MS", sans-serif;
+}
+@mixin titreh2{
+    font-size: 20px;
+}
+$color-primary: #9356DC;
+$light-color-primary: lighten($color-primary, 30%);
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-white: #FFF;
+$color-grey: #d1d0d0;
+$color-grey-light: lighten($color-grey, 15%);
+$color-grey-dark: darken($color-grey, 50%);
+
+/*header*/
+header{
+    overflow: hidden;
+}
+.banniere {
+    background-color: $color-white; 
+    
+    padding-top: 1%;
+    padding-bottom: 2%;
+    position: relative;
+    z-index: 2;
+    & i {
+        font-size: 40px;
+    }
+    & img{
+        display: block;
+        margin: auto;  
+    }
+}
+.img_resto {
+    width: 100%;
+    height: auto;
+    position:relative;
+    top:-550px;
+}
