@@ -169,7 +169,7 @@ section {
         box-shadow: 2px 2px 6px $color-grey;
     }
     & figure {
-        width: 485px;
+        width: 98%;
         height: 305px;
         margin: 5px 5px 5px 5px;
         background-color: $color-white;
@@ -187,7 +187,7 @@ section {
     }
 }
 @mixin imagesrestoordi {
-    width: 490px;
+    width: 100%;
     height: 310px;
     position: relative;
 }
@@ -402,7 +402,7 @@ section {
         box-shadow: 2px 2px 6px $color-grey;
     }
     & figure {
-        width: 290px;
+        width: 96%;
         height: 205px;
         border-radius: 10px;
         & p {
@@ -411,7 +411,7 @@ section {
     }
 }
 @mixin imagesrestomobile {
-    width: 300px;
+    width: 100%;
     height: 200px;
     position: relative;
 }
