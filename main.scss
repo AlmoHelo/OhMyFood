@@ -25,7 +25,6 @@ $color-white: #FFF;
 $color-grey: #d1d0d0;
 $color-grey-light: lighten($color-grey, 15%);
 $color-grey-dark: darken($color-grey, 10%);
-
 /*version ordi*/
 header{
     overflow: hidden;
@@ -97,6 +96,7 @@ nav {
     & h2{
         @include titreh2;
         font-size: 40px;
+        margin-left: 20px;
     }
     & ul{
         display: flex;
@@ -122,15 +122,16 @@ nav {
                 line-height: 25px;
                 display: flex;
                 justify-content: center;
-                margin-right: 25px;
+                margin-right: 20px;
+                margin-left: -5px;
             }
             & i {
                 color: grey;
-                font-size: 20px;
+                font-size: 25px;
                 margin-right: 25px;
             }
             & p{
-                font-size: 13px;
+                font-size: 20px;
                 font-weight: bold;
             }
         }
@@ -143,8 +144,185 @@ nav {
         color: $color-primary;
     }
 }
+/*section*/
+section {
+    width: 100%;
+    background-color: $color-grey-light;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    @include police2;
+    & h2{
+        @include titreh2;
+        width: 100%;
+        margin-left: 20px;
+        padding-top: 50px;
+        font-size: 40px;
+    }
+    & .restaurant{
+        width: 35%;
+        height: 320px;
+        margin:auto;
+        margin-bottom: 3%;
+        background-color: $color-white;
+        border-radius: 30px;
+        box-shadow: 2px 2px 6px $color-grey;
+    }
+    & figure {
+        width: 485px;
+        height: 305px;
+        margin: 5px 5px 5px 5px;
+        background-color: $color-white;
+        border-radius: 30px;
+        overflow: hidden;
+        & p {
+            font-size: 20px;
+            margin: 0px;
+            margin-top: 2px;
+        }
+    }
+    & a{
+        text-decoration: none;
+        color: black;
+    }
+}
+@mixin imagesrestoordi {
+    width: 490px;
+    height: 310px;
+    position: relative;
+}
+.img{
+    left: -5px;
+    &_resto{
+    @include imagesrestoordi;
+    top: -100px;
+    &--modifier{
+        @include imagesrestoordi;
+        height: 500px;
+        top: -200px;
+        }
+    }   
+}
+@mixin figcaption{
+    width: 100%;
+    height: 120px;               
+    display: flex;
+    align-items: center;
+    background-color: $color-white;  
+    position: relative;
+}
+.figcap-1{
+    @include figcaption;
+    top: -157px;
+    &-2{
+        @include figcaption;
+        top: -350px;
+    }
+    &-2-3{
+        @include figcaption;
+        top: -115px;
+    }
+    &-2-3-4{
+        @include figcaption;
+        top: -115px;
+    }
+}
+.figcap{
+    &_texte{
+        margin-right: 15%;
+        padding-left: 30px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        width: 60%;
+        @include police2;
+        &_gras{
+            font-weight: bold;
+        }
+    }
+    & i{
+        font-size: 40px;
+        color: $color-grey-dark;
+        margin-top: -20px;
+        &:active{
+            background: linear-gradient($color-primary, $color-secondary);
+            border: none;
 
+        }
+    }
+}
 
+@keyframes heart {
+    0% {
+        transform: scaleY(0);
+    }
+    17% {
+        transform: scaleY(.18);
+    }
+    24% {
+        transform: scaleY(.4);
+    }
+    46% {
+        transform: scaleY(.81);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@mixin bouton-nouveau{
+    width: 120px;
+    height: auto;
+    font-size: 25px;
+    position: relative;
+    border: 1px solid $color-tertiary;
+    background: $color-tertiary;
+    color: rgb(2, 167, 2);
+    right: -350px;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+}
+.nouveau1{
+    @include bouton-nouveau;
+    top: -300px;
+}
+.nouveau2{
+    @include bouton-nouveau;
+    top: -490px;
+}
+/*footer*/
+footer{
+    background-color: $color-grey-dark;
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    & h3 {
+        @include police1;
+        color: $color-white;
+        font-size: 25px;
+    }
+}
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    & li{
+        list-style-type: none;
+        margin-left: -40px;
+        @include police2;
+        width: 20%;
+        font-size: 23px;
+        & a{
+            text-decoration: none;
+            color: $color-white;
+        }
+    }
+    & i {
+        width: 12px;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+}
 
 $breakpoint: (
     mobile: 767px,
@@ -200,73 +378,58 @@ nav {
             & span{
                 position: absolute;
                 left: 15px;
+                margin-left: 0px;
+            }
+            & i{
+                font-size: 20px;
+            }
+            & p{
+                font-size: 18px;
             }
         }
     }
 }
 /*section*/
 section {
-    width: 100%;
-    background-color: $color-grey-light;
-    padding-bottom: 50px;
-    @include police2;
     & h2{
         @include titreh2;
-        margin-left: 20px;
-        padding-top: 50px;
     }
     & .restaurant{
         width: 85%;
         height: 220px;
-        margin-left: 20px;
-        margin-bottom: 10px;
-        background-color: $color-white;
-        border-radius: 10px;
+        border-radius: 10px;        
         overflow: hidden;
         box-shadow: 2px 2px 6px $color-grey;
     }
     & figure {
-        width: 100%;
-        height: 250px;
-        margin: 0px;
-        background-color: $color-white;
+        width: 290px;
+        height: 205px;
         border-radius: 10px;
         & p {
             font-size: 14px;
-            margin: 0px;
-            margin-top: 2px;
         }
     }
-    & a{
-        text-decoration: none;
-        color: black;
-    }
 }
-@mixin imagesresto {
-    width: 270px;
+@mixin imagesrestomobile {
+    width: 300px;
     height: 200px;
     position: relative;
 }
 .img{
     &_resto{
-    @include imagesresto;
-    left: -5px;
+    @include imagesrestomobile;
     top: -50px;
     &--modifier{
-        @include imagesresto;
+        @include imagesrestomobile;
         height: 350px;
-        left: -5px;
         top: -125px;
         }
     }   
 }
 @mixin figcaption{
     width: 100%;
-    height: 80px;               /*a supp ??*/
-    display: flex;
-    align-items: center;
-    background-color: $color-white;  /*mettre en blanc*/
-    position: relative;
+    height: 60px;     
+    padding-top: 20px;
 }
 .figcap-1{
     @include figcaption;
@@ -286,61 +449,22 @@ section {
 }
 .figcap{
     &_texte{
-    margin: 0px;
-    margin-right: 20%;
     padding-left: 10px;
     padding-top: 15px;
-    width: 60%;
     height: 70px;
-    @include police2;
-        &_gras{
-            font-weight: bold;
-        }
+    margin-right: 70px;
     }
     & i{
         font-size: 25px;
-        color: $color-grey-dark;
-        margin-top: -20px;
-        &:active{
-            background: linear-gradient($color-primary, $color-secondary);
-            border: none;
-            & > .progress-bar{
-                animation-name: heart 1000ms 150ms cubic-bezier(.9,0,.1,1);
-            }
-
-        }
-    }
-}
-
-@keyframes heart {
-    0% {
-        transform: scaleY(0);
-    }
-    17% {
-        transform: scaleY(.18);
-    }
-    24% {
-        transform: scaleY(.4);
-    }
-    46% {
-        transform: scaleY(.81);
-    }
-    100% {
-        transform: scaleY(1);
+        margin-top: -40px;    
     }
 }
 
 @mixin bouton-nouveau{
     width: 80px;
     height: 30px;
-    position: relative;
-    border: 1px solid $color-tertiary;
-    background: $color-tertiary;
-    color: green;
-    right: -170px;
-    line-height: 30px;
-    display: flex;
-    justify-content: center;
+    font-size: 15px;
+    right: -195px;
 }
 .nouveau1{
     @include bouton-nouveau;
