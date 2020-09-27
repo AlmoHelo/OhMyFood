@@ -603,7 +603,7 @@ section {
     width: 100px;
     height: 30px;
     font-size: 20px;
-    right: -215px;
+    right: -15px;
 }
 .nouveau1{
     @include bouton-nouveau-tablette;
@@ -612,5 +612,24 @@ section {
 .nouveau2{
     @include bouton-nouveau-tablette;
     top: -330px;
+}
+/*footer*/
+footer{
+    & h3 {
+        font-size: 32px;
+    }
+}
+footer ul{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: -60px;
+    & li{
+        width: 40%;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    & i {
+        font-size: 16px;
+    }
 }
 }
