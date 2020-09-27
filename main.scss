@@ -326,7 +326,8 @@ footer ul{
 
 $breakpoint: (
     mobile: 767px,
-    tablette: 991px,
+    littletablette: 768px,
+    bigtablette: 991px,
 );
 @media screen and (max-width: map-get($breakpoint, mobile)){
 
@@ -492,7 +493,7 @@ footer ul{
     }
 }
 }
-@media screen and (max-width: map-get($breakpoint, tablette)){
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
 /*header*/ 
 .logo{
     width: 200px;
@@ -511,5 +512,29 @@ footer ul{
 }
 .titre{
     font-size: 20px;
+}
+/*nav*/
+nav {
+    & h2{
+        font-size: 35px;
+    }
+    & ul{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        & li{
+            width: 40%;
+            margin-right: 30px;
+            margin-bottom: 10px;      
+            & span{
+                margin-left: -45px;
+            }
+            & i{
+                font-size: 25px;
+            }
+            & p{
+                font-size: 18px;
+            }
+        }
+    }
 }
 }
