@@ -24,7 +24,7 @@ $color-tertiary: #99E2D0;
 $color-white: #FFF;
 $color-grey: #d1d0d0;
 $color-grey-light: lighten($color-grey, 15%);
-$color-grey-dark: darken($color-grey, 10%);
+$color-grey-dark: darken($color-grey, 50%);
 /*version ordi*/
 header{
     overflow: hidden;
@@ -474,35 +474,21 @@ section {
     @include bouton-nouveau;
     top: -340px;
 }
-
-
 /*footer*/
 footer{
-    background-color: $color-grey-dark;
-    width: 100%;
-    padding-left: 20px;
-    padding-top: 5px;
-    padding-bottom: 30px;
     & h3 {
-        @include police1;
-        color: $color-white;
+        font-size: 20px;
     }
 }
 footer ul{
+    flex-direction: column;
     & li{
-        list-style-type: none;
-        margin-left: -40px;
+        width: 90%;
+        font-size: 18px;
         margin-bottom: 10px;
-        @include police2;
-        & a{
-            text-decoration: none;
-            color: $color-white;
-        }
     }
     & i {
-        width: 12px;
-        font-size: 13px;
-        margin-right: 10px;
+        font-size: 16px;
     }
 }
 }
