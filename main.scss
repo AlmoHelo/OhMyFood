@@ -492,3 +492,24 @@ footer ul{
     }
 }
 }
+@media screen and (max-width: map-get($breakpoint, tablette)){
+/*header*/ 
+.logo{
+    width: 200px;
+    margin-top: 20px;
+}
+.recherche{                     /*pq marge à droite et gauche ?? Centrer icone et barre*/
+    width: 100%;
+    height: 80px;
+    & i{
+        font-size: 20px;
+    }
+    & .search {
+        width: 180px;
+        font-size: 20px;
+    }
+}
+.titre{
+    font-size: 20px;
+}
+}
