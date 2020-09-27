@@ -84,7 +84,6 @@ header{
         border-bottom: 4px solid $color-tertiary;
     }
     & .liste{
-        border:1px solid red;
         overflow: hidden;
     }
     & li{
@@ -165,29 +164,50 @@ footer ul{
     }
 }
 /*animation*/
-.liste:hover{
+.liste{
     transform-origin:bottom;
     animation-name: liste;
     animation-duration: 2000ms;
-    & li{
-        border: 1px solid green;
-    }
+    animation-fill-mode: both;
+    animation-delay: 500ms;
 }
 @keyframes liste{
-    0%{
+    10%{
         opacity: 0;
     }
-    25%{
-        opacity:.25;
-    }
-    50%{
-        opacity:.5;
-    }
-    75%{
+    90%{
         opacity:.75;
     }
     100%{
         opacity: 1;
     }
 }
-
+.essaie{
+    animation-name: essaie;
+    transform-origin:bottom;
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+    &_2{
+        animation-name: essaie;
+        transform-origin: bottom;
+        animation-duration: 1300ms;
+        animation-fill-mode: both;
+    }
+    &_3{
+        animation-name: essaie;
+        transform-origin: bottom;
+        animation-duration: 1600ms;
+        animation-fill-mode: both;
+    }
+}
+@keyframes essaie{
+    0%{
+        transform: translateY(-500%);
+    }
+    75%{
+        transform: translateY(-2%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
