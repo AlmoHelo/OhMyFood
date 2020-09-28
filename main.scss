@@ -92,6 +92,7 @@ header{
 /*nav*/
 nav {
     width: 100%;
+    margin-bottom: 50px;
     @include police2;
     & h2{
         @include titreh2;
