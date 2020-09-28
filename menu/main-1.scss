@@ -32,13 +32,13 @@ header{
 }
 .banniere {
     background-color: $color-white; 
-    
     padding-top: 1%;
     padding-bottom: 2%;
     position: relative;
     z-index: 2;
     & i {
         font-size: 40px;
+        color: black;
     }
     & img{
         display: block;
@@ -60,6 +60,11 @@ header{
     padding-left: 2%;;
     display: flex;
     flex-wrap: wrap;
+}
+.titre{
+    display: flex;
+    width: 70%;
+    align-items: center;
     & h1{
         width: 100%;
         height: 40px;
@@ -68,6 +73,10 @@ header{
         font-size: 35px;
         margin-top: 30px;
         margin-bottom: 40px;
+        margin-right: -650px;
+    }
+    & i{
+        font-size: 35px;
     }
 }
 .repas{
@@ -100,6 +109,8 @@ header{
 }
 .texte{
     height: 65px;
+    display: flex;
+    flex-direction: column;
     & p{
         margin-bottom: -10px;
     }
@@ -217,4 +228,47 @@ footer ul{
         transform: translateY(0%);
         opacity:1;
     }
+}
+
+/*version mobile*/
+$breakpoint: (
+    mobile: 767px,
+    littletablette: 768px,
+    bigtablette: 991px,
+);
+@media screen and (max-width: map-get($breakpoint, mobile)){
+/*header*/
+.logo{
+    width: 165px;
+    padding-top: 10px;
+}
+.banniere{
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    & i{
+        font-size: 20px;
+    }
+}
+.img_resto {
+    top: 0px;
+}
+.menu{
+    top: 900px;
+    border-radius: 15px;
+    width: 94%;
+}
+.titre{
+    width: 90%;
+    & h1{
+        font-size: 25px;
+        margin-right: 0px;
+    }
+    & i{
+        font-size: 25px;
+    }
+}
+footer{
+    top: 1500px;
+}
 }
