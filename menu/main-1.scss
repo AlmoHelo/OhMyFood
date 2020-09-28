@@ -22,58 +22,73 @@ $light-color-primary: lighten($color-primary, 30%);
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-white: #FFF;
-$color-grey: #d1d0d0;
-$color-grey-light: lighten($color-grey, 10%);
-$color-grey-dark: darken($color-grey, 50%);
+$color-grey: rgb(234,234,234);
+$color-grey-light: rgb(246,246,246);
+$color-grey-dark: rgb(53,53,53);
+
+html, body, div, span, h1, h2, h3, p, a, img, ul, li, figure, figcaption, footer, header, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 
 /*header*/
 header{
     overflow: hidden;
+    height: 500px;
 }
 .banniere {
     background-color: $color-white; 
-    padding-top: 1%;
-    padding-bottom: 2%;
-    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    position: relative; 
     z-index: 2;
+    overflow: hidden;
     & i {
         font-size: 40px;
         color: black;
+        padding-left: 30px;
     }
     & img{
-        display: block;
-        margin: auto;  
+        margin: auto;
     }
 }
 .img_resto {
     width: 100%;
     height: auto;
-    position:relative;
-    top:-380px;
+    position: relative;
+    z-index: 1;
+    bottom: 350px;
 }
+/*section*/
 .menu{
     width: 100%;
     background-color: $color-grey-light;
     border-radius: 40px;
     position: absolute;
-    margin-top: -650px;
-    padding-left: 2%;;
+    z-index: 2;
+    top: 50%;
     display: flex;
     flex-wrap: wrap;
+    padding-left: 35px;
 }
 .titre{
+    width: 100%;
     display: flex;
-    width: 70%;
-    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-right: 29%;
     & h1{
         width: 100%;
         height: 40px;
-        @include police1();
+        @include police1;
         font-weight: bold;
         font-size: 35px;
-        margin-top: 30px;
-        margin-bottom: 40px;
-        margin-right: -650px;
     }
     & i{
         font-size: 35px;
@@ -81,55 +96,54 @@ header{
 }
 .repas{
     width: 30%;
-    margin-right: 40px;
-    @include police2();
+    @include police2;
     margin-bottom: 30px;
+    margin-right: 20px;
     & h2{
         width: 65px;
         font-size: 28px;
         font-weight: normal;
-        margin-bottom: 40px;
-        padding-bottom: 10px;
         border-bottom: 4px solid $color-tertiary;
+        margin-bottom: 20px;
+        padding-bottom:5px ;
     }
     & .liste{
         overflow: hidden;
     }
     & li{
         list-style-type: none;
-        margin-left: -40px;
-        padding-top: 2px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         width: 90%;
         height: 75px;
         box-shadow: 2px 2px 6px $color-grey-dark;
         border-radius: 20px;
-        padding-left: 30px;
+        padding-left: 30px;        
     }
 }
 .texte{
     height: 65px;
     display: flex;
     flex-direction: column;
-    & p{
-        margin-bottom: -10px;
-    }
-        &_gras{
+    &_gras{
+        font-weight: bold;
+        &--modifier{
             font-weight: bold;
-            &--modifier{
-                font-weight: bold;
-                position: relative;
-                top:-25px;
-                right: -305px;
-            }
+            margin-right: 25px;
         }
+    }
+    & p{
+        margin-top: 10px;
+    }
+}
+.texte_2{
+    display: flex;
+    justify-content: space-between;
 }
 .button{
     @include police2();
     width: 200px;
     height: 40px;
-    margin-top: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     border-radius: 35px;
     color: $color-white;
     font-size: 20px;
@@ -142,15 +156,16 @@ header{
 footer{
     background-color: $color-grey-dark;
     width: 100%;
-    padding-left: 20px;
-    padding-top: 5px;
-    padding-bottom: 30px;
-    position: absolute;
-    margin-top: 50px;
+    position: relative;
+    top: 520px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     & h3 {
         @include police1;
         color: $color-white;
         font-size: 30px;
+        margin-left: 20px;
+        margin-bottom: 15px;
     }
 }
 footer ul{
@@ -158,7 +173,7 @@ footer ul{
     justify-content: space-between;
     & li{
         list-style-type: none;
-        margin-left: -40px;
+        margin-left: 20px;
         margin-bottom: 20px;
         @include police2;
         width: 20%;
@@ -240,30 +255,25 @@ $breakpoint: (
 /*header*/
 .logo{
     width: 165px;
-    padding-top: 10px;
 }
 .banniere{
-    display: flex;
-    align-items: center;
-    margin-top: 0;
     & i{
         font-size: 20px;
     }
 }
 .img_resto {
-    top: 0px;
+    bottom: 0px;
 }
 /*section*/
 .menu{
-    top: 900px;
-    border-radius: 15px;
-    width: 95%;
+    top: 36%;
+    padding: 0;
 }
 .titre{
-    width: 95%;
+    width: 100%;
+    margin-left: 20px;
     & h1{
-        font-size: 30px;
-        margin-right: 25px;
+        font-size: 25px;
     }
     & i{
         font-size: 25px;
@@ -273,26 +283,29 @@ $breakpoint: (
     width: 100%;
     margin: auto;
     & h2{
-        font-size: 22px;
-        margin-bottom: 0px;
+        font-size: 18px;
+        width: 40px;
+        margin-left: 10px;
+        margin-bottom: 15px;
     }
     & .liste{
         & .texte{
-        width: 108%;
+        width: 95%;
         height: auto;
+        margin: auto;
         margin-bottom: 15px;
-        padding-left: 12px;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 10px;
             &_gras{
-                font-size: 18px;
-                margin-top: 10px;
+                font-size: 15px;
                 &--modifier{
-                    right: -300px;
+                    font-size: 16px;
                 }
             }
-            & p{
-                width: 85%;
-                font-size: 16px;
-            }
+        }
+        & p{
+            font-size: 13px;
         }
     }
 }
@@ -303,13 +316,11 @@ $breakpoint: (
     line-height: 50px;
     margin: auto;
     margin-top: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
-
-
 /*footer*/
 footer{
-    top: 1490px;
+    top: 935px;
     & h3 {
         font-size: 20px;
     }
@@ -317,12 +328,12 @@ footer{
 footer ul{
     flex-direction: column;
     & li{
-        width: 90%;
+        width: 100%;
         font-size: 18px;
         margin-bottom: 10px;
     }
     & i {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 }
@@ -332,27 +343,23 @@ footer ul{
     width: 250px;
 }
 .banniere{
-    display: flex;
-    align-items: center;
     & i{
         font-size: 30px;
     }
 }
 .img_resto {
-    top: -150px;
+    bottom: 30%;
 }
 /*section*/
 .menu{
-    top: 1000px;
+    top: 30%;
     border-radius: 15px;
-    width: 97%;
+    padding: 0;
 }
 .titre{
-    width: 90%;
     & h1{
         font-size: 30px;
-        margin-right: 25px;
-        margin-left: 10px;
+        margin-left: 30px;
     }
     & i{
         font-size: 30px;
@@ -362,25 +369,18 @@ footer ul{
     width: 100%;
     & h2{
         font-size: 25px;
-        margin-bottom: 5px;
         margin-left: 30px;
+        margin-bottom: 20px;
     }
     & .liste{
         width: 95%;
         & .texte{
-            width: 85%;
             margin: auto;
             margin-bottom: 25px;
-            padding-left: 40px;
             &_gras{
                 margin-top: 10px;
-                &--modifier{
-                    right: -480px;
-                    top: -50px;
-                }
             }
             & p{
-                width: 85%;
                 font-size: 20px;
             }
         }
@@ -388,15 +388,15 @@ footer ul{
 }
 .button{
     margin: auto;
-    margin-top: 30px;
     margin-bottom: 60px;
-    width: 200px;
-    height: 40px;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
 }
 /*footer*/  
     footer{
-        top: 1790px;
-        width: 100%;
+        top: 1200px;
         & h3 {
             font-size: 32px;
         }
@@ -404,14 +404,12 @@ footer ul{
     footer ul{
         flex-wrap: wrap;
         justify-content: space-around;
-        margin-left: -60px;
         & li{
             width: 40%;
             font-size: 25px;
-            margin-bottom: 20px;
         }
         & i {
-            font-size: 16px;
+            font-size: 20px;
         }
     }
 }
@@ -419,10 +417,9 @@ footer ul{
 
 
 .titre i{
-    &:active{
+    &:hover{
         animation-name: animation-heart;
         background: linear-gradient($color-secondary, $color-primary);
-        
     }
 }
 @keyframes animation-heart{
