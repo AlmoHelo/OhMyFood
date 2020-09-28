@@ -15,16 +15,41 @@
     font-family: "Roboto", "trebuchet MS", sans-serif;
 }
 @mixin titreh2{
-    font-size: 20px;
+    font-size: 40px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+@mixin titreh2mobile{
+    font-size: 23px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+@mixin titreh2tablette{
+    font-size: 32px;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 $color-primary: #9356DC;
 $light-color-primary: lighten($color-primary, 30%);
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-white: #FFF;
-$color-grey: #d1d0d0;
-$color-grey-light: lighten($color-grey, 15%);
-$color-grey-dark: darken($color-grey, 50%);
+$color-grey: rgb(234,234,234);
+$color-grey-light: rgb(246,246,246);
+$color-grey-dark: rgb(53,53,53);
+
+
+html, body, div, span, h1, h2, h3, p, a, img, ul, li, figure, figcaption, footer, header, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 /*version ordi*/
 header{
     overflow: hidden;
@@ -36,7 +61,7 @@ header{
     margin-top: 40px;
     margin-bottom: 20px;
 }
-.recherche{                     /*pq marge à droite et gauche ?? Centrer icone et barre*/
+.recherche{                     
     width: 100%;
     height: 100px;
     background-color:  $color-grey;
@@ -46,19 +71,19 @@ header{
     align-items: center;
     & i{
         font-size: 30px;
-        margin-right: 5px;
     }
     & .search {
-        width: 18%;
+        width: 25%;
         font-size: 30px;
         background-color: $color-grey;
         border: 1px solid $color-grey;
+        margin-left: 10px;
         @include police1;
     }
 }
 .titre{
     width: 100%;
-    font-size: 25px;
+    font-size: 45px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -72,8 +97,7 @@ header{
     }
     & p{
         width: 90%;
-        font-size: 25px;
-        margin-top: 0;
+        font-size: 30px;
         margin-bottom: 20px;
     }
 }
@@ -96,8 +120,6 @@ nav {
     @include police2;
     & h2{
         @include titreh2;
-        font-size: 40px;
-        margin-left: 20px;
     }
     & ul{
         display: flex;
@@ -106,7 +128,8 @@ nav {
         & li{
             width: 25%;
             height: 75px;
-            box-shadow: 2px 2px 6px $color-grey-light;
+            background-color: $color-grey-light;
+            box-shadow: 2px 2px 6px $color-grey;
             list-style-type: none;
             border-radius: 20px;
             display: flex;
@@ -124,21 +147,20 @@ nav {
                 display: flex;
                 justify-content: center;
                 margin-right: 20px;
-                margin-left: -5px;
             }
             & i {
                 color: grey;
-                font-size: 25px;
+                font-size: 30px;
                 margin-right: 25px;
             }
             & p{
-                font-size: 20px;
+                font-size: 23px;
                 font-weight: bold;
             }
         }
     }
 }
-.fonctionnement:active{
+.fonctionnement:hover{
     background-color: $light-color-primary;
     box-shadow: 3px 3px 6px $color-grey-dark;  
     & i{
@@ -156,9 +178,6 @@ section {
     & h2{
         @include titreh2;
         width: 100%;
-        margin-left: 20px;
-        padding-top: 50px;
-        font-size: 40px;
     }
     & .restaurant{
         width: 35%;
@@ -170,14 +189,14 @@ section {
         box-shadow: 2px 2px 6px $color-grey;
     }
     & figure {
-        width: 98%;
+        width: 100%;
         height: 305px;
-        margin: 5px 5px 5px 5px;
+        margin: 0;
         background-color: $color-white;
         border-radius: 30px;
         overflow: hidden;
         & p {
-            font-size: 20px;
+            font-size: 27px;
             margin: 0px;
             margin-top: 2px;
         }
@@ -188,19 +207,19 @@ section {
     }
 }
 @mixin imagesrestoordi {
-    width: 100%;
+    width: 105%;
     height: 310px;
     position: relative;
+    right: 5px;
 }
 .img{
-    left: -5px;
     &_resto{
-    @include imagesrestoordi;
-    top: -100px;
+        @include imagesrestoordi;
+        bottom: 90px;
     &--modifier{
         @include imagesrestoordi;
         height: 500px;
-        top: -200px;
+        bottom: 200px;
         }
     }   
 }
@@ -214,26 +233,24 @@ section {
 }
 .figcap-1{
     @include figcaption;
-    top: -157px;
+    bottom: 157px;
     &-2{
         @include figcaption;
-        top: -350px;
+        bottom: 350px;
     }
     &-2-3{
         @include figcaption;
-        top: -115px;
+        bottom: 115px;
     }
     &-2-3-4{
         @include figcaption;
-        top: -115px;
+        bottom: 115px;
     }
 }
 .figcap{
     &_texte{
         margin-right: 15%;
         padding-left: 30px;
-        padding-top: 25px;
-        padding-bottom: 25px;
         width: 60%;
         @include police2;
         &_gras{
@@ -243,8 +260,8 @@ section {
     & i{
         font-size: 40px;
         color: $color-grey-dark;
-        margin-top: -20px;
-        &:active{
+        margin-bottom: 20px;
+        &:hover{
             background: linear-gradient($color-primary, $color-secondary);
             border: none;
 
@@ -278,35 +295,39 @@ section {
     border: 1px solid $color-tertiary;
     background: $color-tertiary;
     color: rgb(2, 167, 2);
-    right: -350px;
+    left: 72%;
     line-height: 30px;
     display: flex;
     justify-content: center;
 }
 .nouveau1{
     @include bouton-nouveau;
-    top: -300px;
+    bottom: 98%;
 }
 .nouveau2{
     @include bouton-nouveau;
-    top: -490px;
+    bottom: 161%;
 }
 /*footer*/
 footer{
     background-color: $color-grey-dark;
     width: 100%;
-    padding-left: 20px;
     padding-top: 5px;
     padding-bottom: 30px;
     & h3 {
         @include police1;
         color: $color-white;
         font-size: 25px;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
     }
 }
 footer ul{
     display: flex;
     justify-content: space-between;
+    margin-left: 60px;
+    margin-bottom: 30px;
     & li{
         list-style-type: none;
         margin-left: -40px;
@@ -341,21 +362,21 @@ header{
     margin-top: 20px;
     margin-bottom: 10px;
 }
-.recherche{                     /*pq marge à droite et gauche ?? Centrer icone et barre*/
+.recherche{                     
     width: 100%;
     height: 50px;
     & i{
         font-size: 13px;
     }
     & .search {
-        width: 35%;
+        width: 40%;
         font-size: 13px;
     }
 }
 .titre{
-    font-size: 10px;
+    font-size: 25px;
     & p{
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 .button{
@@ -369,24 +390,24 @@ header{
 /*nav*/
 nav {
     & h2{
-        @include titreh2;
+        @include titreh2mobile;
     }
     & ul{
         flex-wrap: wrap;
         & li{
-            width: 100%;
-            margin-bottom: 25px;
-            margin-left: -20px;        
+            width: 75%;
+            margin-bottom: 25px;       
             & span{
                 position: absolute;
-                left: 15px;
+                left: 12px;
                 margin-left: 0px;
             }
             & i{
                 font-size: 20px;
             }
             & p{
-                font-size: 18px;
+                font-size: 16px;
+                font-weight: normal;
             }
         }
     }
@@ -394,71 +415,71 @@ nav {
 /*section*/
 section {
     & h2{
-        @include titreh2;
+        @include titreh2mobile;
     }
     & .restaurant{
-        width: 85%;
-        height: 220px;
+        width: 90%;
+        height: 210px;
         border-radius: 10px;        
         overflow: hidden;
         box-shadow: 2px 2px 6px $color-grey;
+        margin-bottom: 20px;
     }
     & figure {
-        width: 96%;
-        height: 205px;
-        border-radius: 10px;
+        width: 100%;
+        border-radius: 20px;
         & p {
-            font-size: 14px;
+            font-size: 16px;
         }
     }
 }
 @mixin imagesrestomobile {
-    width: 100%;
+    width: 105%;             
     height: 200px;
     position: relative;
 }
 .img{
     &_resto{
     @include imagesrestomobile;
-    top: -50px;
+    bottom: 50px;
     &--modifier{
         @include imagesrestomobile;
         height: 350px;
-        top: -125px;
+        bottom: 125px;
         }
     }   
 }
 @mixin figcaption{
     width: 100%;
-    height: 60px;     
+    height: 50px;     
     padding-top: 20px;
 }
 .figcap-1{
     @include figcaption;
-    top: -87px;
+    bottom: 90px;
     &-2{
         @include figcaption;
-        top: -240px;
+        bottom: 240px;
     }
     &-2-3{
         @include figcaption;
-        top: -55px;
+        bottom: 55px;
     }
     &-2-3-4{
         @include figcaption;
-        top: -55px;
+        bottom: 55px;
     }
 }
 .figcap{
     &_texte{
     padding-left: 10px;
-    padding-top: 15px;
     height: 70px;
-    margin-right: 70px;
+    margin-right: 20%;
     }
     & i{
         font-size: 25px;
-        margin-top: -40px;    
+        margin-right: 20px;
+        margin-bottom: 20px;    
     }
 }
 
@@ -466,24 +487,26 @@ section {
     width: 80px;
     height: 30px;
     font-size: 15px;
-    right: -195px;
+    left: 65%;
 }
 .nouveau1{
     @include bouton-nouveau;
-    top: -190px;
+    bottom: 62%;
 }
 .nouveau2{
     @include bouton-nouveau;
-    top: -340px;
+    bottom: 111%;
 }
 /*footer*/
 footer{
+    width: 100%;
     & h3 {
         font-size: 20px;
     }
 }
 footer ul{
     flex-direction: column;
+    margin-bottom: 20px;
     & li{
         width: 90%;
         font-size: 18px;
@@ -500,8 +523,7 @@ footer ul{
     width: 200px;
     margin-top: 20px;
 }
-.recherche{                     /*pq marge à droite et gauche ?? Centrer icone et barre*/
-    width: 100%;
+.recherche{ 
     height: 80px;
     & i{
         font-size: 20px;
@@ -512,25 +534,24 @@ footer ul{
     }
 }
 .titre{
-    font-size: 20px;
+    font-size: 40px;
 }
 /*nav*/
 nav {
     & h2{
         font-size: 35px;
+        @include titreh2tablette;
     }
     & ul{
         flex-wrap: wrap;
         justify-content: flex-start;
         & li{
             width: 40%;
-            margin-right: 30px;
-            margin-bottom: 10px;      
-            & span{
-                margin-left: -45px;
-            }
+            margin-left: 30px;
+            margin-bottom: 20px; 
             & i{
                 font-size: 25px;
+                margin-right: 15px;
             }
             & p{
                 font-size: 18px;
@@ -542,13 +563,13 @@ nav {
 section {
     & h2{
         font-size: 35px;
+        @include titreh2tablette;
     }
     & .restaurant{
         width: 40%;
         height: 220px;    
     }
     & figure {
-        width: 96%;
         height: 215px;
         & p {
             font-size: 18px;
@@ -556,18 +577,17 @@ section {
     }
 }
 @mixin imagesrestotablette {
-    width: 100%;
+    width: 105%;
     height: 200px;
-    position: relative;
 }
 .img{
     &_resto{
     @include imagesrestotablette;
-    top: -40px;
+    bottom: 40px;
     &--modifier{
         @include imagesrestotablette;
         height: 350px;
-        top: -115px;
+        bottom: 130px;
         }
     }   
 }
@@ -577,18 +597,18 @@ section {
 }
 .figcap-1{
     @include figcaption;
-    top: -97px;
+    bottom: 97px;
     &-2{
         @include figcaption;
-        top: -250px;
+        bottom: 250px;
     }
     &-2-3{
         @include figcaption;
-        top: -65px;
+        bottom: 65px;
     }
     &-2-3-4{
         @include figcaption;
-        top: -65px;
+        bottom: 65px;
     }
 }
 .figcap{
@@ -604,26 +624,27 @@ section {
     width: 100px;
     height: 30px;
     font-size: 20px;
-    right: -15px;
+    left: 63%;
 }
 .nouveau1{
     @include bouton-nouveau-tablette;
-    top: -185px;
+    bottom: 88%;
 }
 .nouveau2{
     @include bouton-nouveau-tablette;
-    top: -330px;
+    bottom: 158%;
 }
 /*footer*/
 footer{
     & h3 {
         font-size: 32px;
+        margin-bottom: 40px;
     }
 }
 footer ul{
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-left: -60px;
+    margin-right: 0px;
     & li{
         width: 40%;
         font-size: 25px;
