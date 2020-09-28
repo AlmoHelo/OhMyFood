@@ -259,15 +259,54 @@ $breakpoint: (
     width: 94%;
 }
 .titre{
-    width: 90%;
+    width: 95%;
     & h1{
-        font-size: 25px;
-        margin-right: 0px;
+        font-size: 30px;
+        margin-right: 25px;
     }
     & i{
         font-size: 25px;
     }
 }
+.repas{
+    width: 100%;
+    margin: auto;
+    & h2{
+        font-size: 22px;
+        margin-bottom: 0px;
+    }
+    & .liste{
+        & .texte{
+        width: 108%;
+        height: auto;
+        margin-bottom: 15px;
+        padding-left: 12px;
+            &_gras{
+                font-size: 18px;
+                margin-top: 10px;
+                &--modifier{
+                    right: -300px;
+                }
+            }
+            & p{
+                width: 85%;
+                font-size: 16px;
+            }
+        }
+    }
+}
+.button{
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+
+/*footer*/
 footer{
     top: 1500px;
 }
