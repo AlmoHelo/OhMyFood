@@ -358,6 +358,37 @@ footer ul{
         font-size: 30px;
     }
 }
+.repas{
+    width: 100%;
+    & h2{
+        font-size: 25px;
+        margin-bottom: 5px;
+        margin-left: 30px;
+    }
+    & .liste{
+        width: 95%;
+        & .texte{
+            width: 85%;
+            margin: auto;
+            margin-bottom: 25px;
+            padding-left: 40px;
+            &_gras{
+                margin-top: 10px;
+                &--modifier{
+                    right: -480px;
+                    top: -50px;
+                }
+            }
+            & p{
+                width: 85%;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+
 
     footer{
         top: 1600px;
