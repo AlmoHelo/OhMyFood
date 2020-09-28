@@ -308,6 +308,20 @@ $breakpoint: (
 
 /*footer*/
 footer{
-    top: 1500px;
+    top: 1490px;
+    & h3 {
+        font-size: 20px;
+    }
+}
+footer ul{
+    flex-direction: column;
+    & li{
+        width: 90%;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    & i {
+        font-size: 16px;
+    }
 }
 }
