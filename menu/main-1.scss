@@ -253,10 +253,11 @@ $breakpoint: (
 .img_resto {
     top: 0px;
 }
+/*section*/
 .menu{
     top: 900px;
     border-radius: 15px;
-    width: 94%;
+    width: 95%;
 }
 .titre{
     width: 95%;
@@ -324,4 +325,41 @@ footer ul{
         font-size: 16px;
     }
 }
+}
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
+/*header*/
+.logo{
+    width: 250px;
+}
+.banniere{
+    display: flex;
+    align-items: center;
+    & i{
+        font-size: 30px;
+    }
+}
+.img_resto {
+    top: -150px;
+}
+/*section*/
+.menu{
+    top: 1000px;
+    border-radius: 15px;
+    width: 96%;
+}
+.titre{
+    width: 90%;
+    & h1{
+        font-size: 30px;
+        margin-right: 25px;
+        margin-left: 10px;
+    }
+    & i{
+        font-size: 30px;
+    }
+}
+
+    footer{
+        top: 1600px;
+    }
 }
