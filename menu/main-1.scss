@@ -172,42 +172,49 @@ footer ul{
     animation-delay: 500ms;
 }
 @keyframes liste{
-    10%{
-        opacity: 0;
+    0%{
+        opacity:0;
     }
-    90%{
-        opacity:.75;
+    10%{
+        opacity: 1;
     }
     100%{
         opacity: 1;
     }
 }
-.essaie{
-    animation-name: essaie;
+.anim{
+    animation-name: animation-liste;
     transform-origin:bottom;
-    animation-duration: 1000ms;
+    animation-duration: 800ms;
     animation-fill-mode: both;
     &_2{
-        animation-name: essaie;
+        animation-name: animation-liste;
         transform-origin: bottom;
-        animation-duration: 1300ms;
+        animation-duration: 1000ms;
         animation-fill-mode: both;
     }
     &_3{
-        animation-name: essaie;
+        animation-name: animation-liste;
         transform-origin: bottom;
-        animation-duration: 1600ms;
+        animation-duration: 1200ms;
         animation-fill-mode: both;
     }
 }
-@keyframes essaie{
+@keyframes animation-liste{
     0%{
-        transform: translateY(-500%);
+        transform: translateY(-700%);
+        opacity: 0;
     }
-    75%{
-        transform: translateY(-2%);
+    80%{
+        transform: translateY(-10%);
+        opacity: 0.80;
+    }
+    90%{
+        transform: translateY(-5%);
+        opacity: 0.90;
     }
     100%{
         transform: translateY(0%);
+        opacity:1;
     }
 }
