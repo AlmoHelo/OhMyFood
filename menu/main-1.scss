@@ -387,7 +387,7 @@ footer ul{
     &:hover ~ .fas {
         display: block;
         color: $color-primary;
-        animation: animation-heart 800ms both ease-in-out;
+        animation: animation-heart 800ms ease-in-out;
     }
 }
 @keyframes heart_1{
@@ -508,6 +508,15 @@ span{
         animation-duration: 800ms;
         animation-fill-mode: forwards;
         transition-timing-function: ease-in-out;
+        &_couper{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            animation-duration: 800ms;
+            animation-fill-mode: forwards;
+            transition-timing-function: ease-in-out;
+            margin-right: 15px;
+        }
     }
 }
 @keyframes ok{
@@ -525,9 +534,9 @@ span{
 }
 @keyframes prix{
     0%{
-        width: 180%;
+        width: 300px;
     }
     100%{
-        width: 130%;
+        width: 240px;
     }
 }
