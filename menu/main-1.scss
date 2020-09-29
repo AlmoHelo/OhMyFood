@@ -94,11 +94,11 @@ header{
         font-size: 35px;
         z-index: 1;
         position: absolute;
-        right: 28%;
+        right: 70%;
     }
     & .fas{
         position: absolute;
-        right: 28%;
+        right: 70%;
         font-size: 35px;
         display: none;
 
@@ -199,61 +199,7 @@ footer ul{
         margin-right: 10px;
     }
 }
-/*animation*/
-.liste{
-    transform-origin:bottom;
-    animation-name: liste;
-    animation-duration: 2000ms;
-    animation-fill-mode: both;
-    animation-delay: 500ms;
-}
-@keyframes liste{
-    0%{
-        opacity:0;
-    }
-    10%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-.anim{
-    animation-name: animation-liste;
-    transform-origin:bottom;
-    animation-duration: 800ms;
-    animation-fill-mode: both;
-    &_2{
-        animation-name: animation-liste;
-        transform-origin: bottom;
-        animation-duration: 1000ms;
-        animation-fill-mode: both;
-    }
-    &_3{
-        animation-name: animation-liste;
-        transform-origin: bottom;
-        animation-duration: 1200ms;
-        animation-fill-mode: both;
-    }
-}
-@keyframes animation-liste{
-    0%{
-        transform: translateY(-700%);
-        opacity: 0;
-    }
-    80%{
-        transform: translateY(-10%);
-        opacity: 0.80;
-    }
-    90%{
-        transform: translateY(-5%);
-        opacity: 0.90;
-    }
-    100%{
-        transform: translateY(0%);
-        opacity:1;
-    }
-}
+
 
 /*version mobile*/
 $breakpoint: (
@@ -285,8 +231,15 @@ $breakpoint: (
     & h1{
         font-size: 25px;
     }
-    & i{
+    & .far{
         font-size: 25px;
+        right: 10%;
+    }
+    & .fas{
+        position: absolute;
+        right: 10%;
+        font-size: 25px;
+        display: none;
     }
 }
 .repas{
@@ -371,8 +324,15 @@ footer ul{
         font-size: 30px;
         margin-left: 30px;
     }
-    & i{
+    & .far{
         font-size: 30px;
+        right: 52%;
+    }
+    & .fas{
+        position: absolute;
+        right: 52%;
+        font-size: 30px;
+        display: none;
     }
 }
 .repas{
@@ -424,7 +384,7 @@ footer ul{
     }
 }
 
-
+/*animation coeur*/
 .far:hover{
     animation: heart_1 600ms both ease-in-out;
 }
@@ -458,5 +418,60 @@ footer ul{
     }
     to{
         opacity: 1;
+    }
+}
+/*animation liste*/
+.liste{
+    transform-origin:bottom;
+    animation-name: liste;
+    animation-duration: 2000ms;
+    animation-fill-mode: both;
+    animation-delay: 500ms;
+}
+@keyframes liste{
+    0%{
+        opacity:0;
+    }
+    10%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.anim{
+    animation-name: animation-liste;
+    transform-origin:bottom;
+    animation-duration: 800ms;
+    animation-fill-mode: both;
+    &_2{
+        animation-name: animation-liste;
+        transform-origin: bottom;
+        animation-duration: 1000ms;
+        animation-fill-mode: both;
+    }
+    &_3{
+        animation-name: animation-liste;
+        transform-origin: bottom;
+        animation-duration: 1200ms;
+        animation-fill-mode: both;
+    }
+}
+@keyframes animation-liste{
+    0%{
+        transform: translateY(-700%);
+        opacity: 0;
+    }
+    80%{
+        transform: translateY(-10%);
+        opacity: 0.80;
+    }
+    90%{
+        transform: translateY(-5%);
+        opacity: 0.90;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity:1;
     }
 }
