@@ -254,12 +254,7 @@ $breakpoint: (
     & .liste{
         & .texte{
         width: 95%;
-        height: auto;
-        margin: auto;
-        margin-bottom: 15px;
         padding-left: 10px;
-        padding-top: 5px;
-        padding-bottom: 10px;
             &_gras{
                 font-size: 15px;
                 &--modifier{
@@ -456,6 +451,12 @@ footer ul{
         animation-duration: 1200ms;
         animation-fill-mode: both;
     }
+    &_4{
+        animation-name: animation-liste;
+        transform-origin: bottom;
+        animation-duration: 1400ms;
+        animation-fill-mode: both;
+    }
 }
 @keyframes animation-liste{
     0%{
@@ -473,5 +474,60 @@ footer ul{
     100%{
         transform: translateY(0%);
         opacity:1;
+    }
+}
+/*animation par ligne*/
+span{
+    display: none;
+}
+.clic:hover{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    & span {
+        display: block;
+        width: 80px;
+        height: 100%;
+        background-color: $color-tertiary;
+        animation-name: block;
+        animation-duration: 1000ms;
+        & .anim_block_ok{
+            display: flex;
+            justify-content: center;
+            line-height: 80px;
+            font-size: 30px;
+            animation-name: ok;
+            animation-duration: 600ms;
+            animation-delay: 100ms;
+            color: $color-white;
+        }
+    }
+    & .texte_2{
+        animation-name: prix;
+        animation-duration: 800ms;
+        animation-fill-mode: forwards;
+        transition-timing-function: ease-in-out;
+    }
+}
+@keyframes ok{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes block{
+    0%{
+        transform: translateX(100%);
+    }
+}
+@keyframes prix{
+    0%{
+        width: 180%;
+    }
+    100%{
+        width: 130%;
     }
 }
