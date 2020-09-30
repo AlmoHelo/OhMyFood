@@ -81,11 +81,11 @@ header {
   font-size: 35px;
   z-index: 1;
   position: absolute;
-  right: 70%;
+  right: 68%;
 }
 .titre .fas {
   position: absolute;
-  right: 70%;
+  right: 68%;
   font-size: 35px;
   display: none;
 }
@@ -226,11 +226,11 @@ footer ul i {
   }
   .titre .far {
     font-size: 22px;
-    right: 8%;
+    right: 11%;
   }
   .titre .fas {
     position: absolute;
-    right: 8%;
+    right: 11%;
     font-size: 22px;
     display: none;
   }
@@ -384,7 +384,9 @@ footer ul i {
 
 .far:hover ~ .fas {
   display: block;
-  color: #9356DC;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  color: transparent;
   animation: animation-heart 800ms ease-in-out;
 }
 
@@ -413,7 +415,7 @@ footer ul i {
     opacity: 1;
   }
 }
-/*animation liste*/
+/*animation menu*/
 .liste {
   transform-origin: bottom;
   animation-name: liste;

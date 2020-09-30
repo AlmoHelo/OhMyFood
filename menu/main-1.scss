@@ -94,14 +94,13 @@ header{
         font-size: 35px;
         z-index: 1;
         position: absolute;
-        right: 70%;
+        right: 68%;
     }
     & .fas{
         position: absolute;
-        right: 70%;
+        right: 68%;
         font-size: 35px;
         display: none;
-
     }
 }
 .repas{
@@ -236,11 +235,11 @@ $breakpoint: (
     }
     & .far{
         font-size: 22px;
-        right: 8%;
+        right: 11%;
     }
     & .fas{
         position: absolute;
-        right: 8%;
+        right: 11%;
         font-size: 22px;
         display: none;
     }
@@ -390,7 +389,9 @@ footer ul{
 .far{
     &:hover ~ .fas {
         display: block;
-        color: $color-primary;
+        background:-webkit-linear-gradient($color-primary, $color-secondary);
+        background-clip:text;
+        color:transparent;
         animation: animation-heart 800ms ease-in-out;
     }
 }
@@ -419,7 +420,7 @@ footer ul{
         opacity: 1;
     }
 }
-/*animation liste*/
+/*animation menu*/
 .liste{
     transform-origin:bottom;
     animation-name: liste;
