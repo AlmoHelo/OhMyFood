@@ -658,8 +658,10 @@ footer ul{
 .far{
     &:hover ~ .fas {
         display: block;
-        color: $color-primary;
-        animation: animation-heart 800ms both ease-in-out;
+        background:-webkit-linear-gradient($color-primary, $color-secondary);
+        background-clip:text;
+        color:transparent;
+        animation: animation-heart 800ms ease-in-out;
     }
 }
 @keyframes heart_1{
