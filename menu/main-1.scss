@@ -479,7 +479,19 @@ footer ul{
         }
     }
 }
-
+.clic:hover{                                    /*animation par ligne version mobile*/
+    & .texte_2{
+        animation-name: prix-tablette;
+    }
+}
+@keyframes prix-tablette{
+    0%{
+        width: 640px;
+    }
+    100%{
+        width: 580px;
+    }
+}
 /*animation coeur*/
 .far:hover{
     animation: heart_1 600ms both ease-in-out;
