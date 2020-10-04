@@ -39,18 +39,16 @@ html, body, div, span, h1, h2, h3, p, a, img, ul, li, figure, figcaption, footer
 header{
     overflow: hidden;
     height: 500px;
-    background-image: url(images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-    background-size: 100%;
-    background-position: 0 -270px;
-    background-repeat: no-repeat;
 }
 .banniere {
+    width: 100%;
     background-color: $color-white; 
     display: flex;
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px; 
-    overflow: hidden;
+    position: absolute;
+    z-index: 1;
     & i {
         font-size: 40px;
         color: black;
@@ -60,7 +58,15 @@ header{
         margin:auto;
     }
 }
-
+.img_resto{
+    width: 100%;
+    position: relative;
+    bottom: 300px;
+}
+.note{                      /*image note enchantée*/
+    bottom : 700px;
+    position: relative;
+}
 /*section*/
 .menu{
     width: 100%;
@@ -69,7 +75,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    top: 450px;
+    top: 430px;
 }
 .titre{
     width: 100%;
@@ -163,7 +169,7 @@ footer{
     padding-top: 15px;
     padding-bottom: 15px;
     position: absolute;
-    top: 1050px;
+    top: 1000px;
     & h3 {
         @include police1;
         color: $color-white;
@@ -171,6 +177,9 @@ footer{
         margin-left: 20px;
         margin-bottom: 15px;
     }
+}
+.enchantee{                 /*footer note enchantée*/
+    top: 1100px;
 }
 footer ul{
     display: flex;
@@ -203,18 +212,22 @@ $breakpoint: (
 );
 @media screen and (max-width: map-get($breakpoint, mobile)){
 /*header*/
-header{
-    background-position: -15px 70px;
-    background-size: 110%;
-}
 .logo{
     width: 165px;
 }
 .banniere{
     & i{
         font-size: 20px;
-    }
-    
+    }   
+}
+.img_resto{
+    width: 110%;
+    top: 70px;
+    right: 10px; 
+}
+.note{                         /*image note enchantée*/
+    top: -10px;
+    height: 400px;
 }
 /*section*/
 .menu{
@@ -225,6 +238,7 @@ header{
 .titre{
     width: 100%;
     margin-left: 10px;
+    margin-bottom: 10px;
     & h1{
         font-size: 25px;
         width: 250px;
@@ -247,7 +261,7 @@ header{
         font-size: 18px;
         width: 40px;
         margin-left: 10px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
     & .liste{
         & .texte{
@@ -271,16 +285,19 @@ header{
     font-size: 18px;
     line-height: 50px;
     margin: auto;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 0px;
+    margin-bottom: 50px;
 }
 /*footer*/
 footer{
-    top: 1500px;
+    top: 1490px;
     & h3 {
         font-size: 20px;
         margin-top: 10px;
     }
+}
+.enchantee{
+    top: 1580px;
 }
 footer ul{
     flex-direction: column;
@@ -296,9 +313,6 @@ footer ul{
 }
 @media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
 /*header*/
-header{
-    background-position: 0px 0px;
-}
 .logo{
     width: 250px;
 }
@@ -306,6 +320,13 @@ header{
     & i{
         font-size: 30px;
     }
+}
+.img_resto{
+    position: relative;
+    top: 0px;
+}
+.note{
+    top: -270px;
 }
 /*section*/
 .menu{
@@ -359,18 +380,21 @@ header{
     font-size: 25px;
 }
 /*footer*/  
-    footer{
-        top: 1900px;
-        & h3 {
-            font-size: 32px;
-        }
+footer{
+    top: 1900px;
+    & h3 {
+        font-size: 32px;
     }
-    footer ul{
-        flex-wrap: wrap;
-        justify-content: space-around;
-        & li{
-            width: 40%;
-            font-size: 25px;
+}
+.enchantee{                 /*footer note enchantée*/
+    top: 2030px;
+}
+footer ul{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & li{
+        width: 40%;
+        font-size: 25px;
         }
         & i {
             font-size: 20px;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Shand";
   src: url("polices/Shrikhand-Regular.otf");
@@ -22,19 +23,19 @@ header {
 }
 
 .banniere {
+  width: 100%;
   background-color: #FFF;
   display: flex;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
+  position: absolute;
+  z-index: 1;
 }
 .banniere i {
   font-size: 40px;
   color: black;
-  padding-left: 30px;
+  margin-left: 20px;
 }
 .banniere img {
   margin: auto;
@@ -42,23 +43,25 @@ header {
 
 .img_resto {
   width: 100%;
-  height: auto;
   position: relative;
-  z-index: 1;
-  bottom: 350px;
+  bottom: 300px;
+}
+
+.note {
+  /*image note enchantée*/
+  bottom: 700px;
+  position: relative;
 }
 
 /*section*/
 .menu {
   width: 100%;
   background-color: #f6f6f6;
-  border-radius: 40px 40px 0 0;
-  position: absolute;
-  z-index: 2;
-  top: 50%;
+  border-radius: 40px 40px 40px 40px;
   display: flex;
   flex-wrap: wrap;
-  padding-left: 35px;
+  position: absolute;
+  top: 430px;
 }
 
 .titre {
@@ -66,7 +69,7 @@ header {
   display: flex;
   margin-top: 30px;
   margin-bottom: 40px;
-  margin-right: 29%;
+  margin-left: 20px;
 }
 .titre h1 {
   width: 100%;
@@ -94,7 +97,7 @@ header {
   width: 30%;
   font-family: "Roboto", "trebuchet MS", sans-serif;
   margin-bottom: 30px;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 .repas h2 {
   width: 65px;
@@ -157,10 +160,10 @@ header {
 footer {
   background-color: #353535;
   width: 100%;
-  position: relative;
-  top: 550px;
   padding-top: 15px;
   padding-bottom: 15px;
+  position: absolute;
+  top: 1000px;
 }
 footer h3 {
   font-family: "Shand", "comic sans ms", sans-serif;
@@ -170,6 +173,11 @@ footer h3 {
   font-size: 30px;
   margin-left: 20px;
   margin-bottom: 15px;
+}
+
+.enchantee {
+  /*footer note enchantée*/
+  top: 1100px;
 }
 
 footer ul {
@@ -206,19 +214,28 @@ footer ul i {
   }
 
   .img_resto {
-    bottom: 0px;
+    width: 110%;
+    top: 70px;
+    right: 10px;
+  }
+
+  .note {
+    /*image note enchantée*/
+    top: -10px;
+    height: 400px;
   }
 
   /*section*/
   .menu {
-    top: 19%;
     padding: 0;
-    border-radius: 25px 25px 0 0;
+    border-radius: 30px 30px 0 0;
+    top: 260px;
   }
 
   .titre {
     width: 100%;
     margin-left: 10px;
+    margin-bottom: 10px;
   }
   .titre h1 {
     font-size: 25px;
@@ -243,7 +260,7 @@ footer ul i {
     font-size: 18px;
     width: 40px;
     margin-left: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   .repas .liste .texte {
     width: 95%;
@@ -265,17 +282,21 @@ footer ul i {
     font-size: 18px;
     line-height: 50px;
     margin: auto;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 0px;
+    margin-bottom: 50px;
   }
 
   /*footer*/
   footer {
-    top: 1010px;
+    top: 1490px;
   }
   footer h3 {
     font-size: 20px;
     margin-top: 10px;
+  }
+
+  .enchantee {
+    top: 1580px;
   }
 
   footer ul {
@@ -301,12 +322,17 @@ footer ul i {
   }
 
   .img_resto {
-    bottom: 30%;
+    position: relative;
+    top: 0px;
+  }
+
+  .note {
+    top: -270px;
   }
 
   /*section*/
   .menu {
-    top: 30%;
+    top: 450px;
     border-radius: 15px;
     padding: 0;
   }
@@ -359,10 +385,15 @@ footer ul i {
 
   /*footer*/
   footer {
-    top: 1300px;
+    top: 1900px;
   }
   footer h3 {
     font-size: 32px;
+  }
+
+  .enchantee {
+    /*footer note enchantée*/
+    top: 2030px;
   }
 
   footer ul {
