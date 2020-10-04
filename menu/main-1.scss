@@ -202,8 +202,73 @@ footer ul{
         margin-right: 10px;
     }
 }
-
-
+/*animation par ligne*/
+span{
+    display: none;
+}
+.clic:hover{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    & span {
+        display: block;
+        width: 60px;
+        height: 100%;
+        background-color: $color-tertiary;
+        animation-name: block;
+        animation-duration: 1000ms;
+        & .anim_block_ok{
+            display: flex;
+            justify-content: center;
+            line-height: 80px;
+            font-size: 22px;
+            animation-name: ok;
+            animation-duration: 600ms;
+            animation-delay: 100ms;
+            color: $color-white;
+        }
+    }
+    & .texte_2{
+        animation-name: prix;
+        animation-duration: 800ms;
+        animation-fill-mode: forwards;
+        transition-timing-function: ease-in-out;
+        &_couper{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            animation-duration: 800ms;
+            animation-fill-mode: forwards;
+            transition-timing-function: ease-in-out;
+            margin-right: 15px;
+        }
+    }
+    & .texte_gras--modifier{
+        padding: 0;
+    }
+}
+@keyframes ok{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes block{
+    0%{
+        transform: translateX(100%);
+    }
+}
+@keyframes prix{
+    0%{
+        width: 380px;
+    }
+    100%{
+        width: 330px;
+    }
+}
 /*version mobile*/
 $breakpoint: (
     mobile: 767px,
@@ -277,6 +342,19 @@ $breakpoint: (
         & p{
             font-size: 13px;
         }
+    }
+}
+.clic:hover{                                    /*animation par ligne version mobile*/
+    & .texte_2{
+        animation-name: prix-mobile;
+    }
+}
+@keyframes prix-mobile{
+    0%{
+        width: 300px;
+    }
+    100%{
+        width: 240px;
     }
 }
 .button{
@@ -499,72 +577,5 @@ footer ul{
     100%{
         transform: translateY(0%);
         opacity:1;
-    }
-}
-/*animation par ligne*/
-span{
-    display: none;
-}
-.clic:hover{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    overflow: hidden;
-    & span {
-        display: block;
-        width: 60px;
-        height: 100%;
-        background-color: $color-tertiary;
-        animation-name: block;
-        animation-duration: 1000ms;
-        & .anim_block_ok{
-            display: flex;
-            justify-content: center;
-            line-height: 80px;
-            font-size: 22px;
-            animation-name: ok;
-            animation-duration: 600ms;
-            animation-delay: 100ms;
-            color: $color-white;
-        }
-    }
-    & .texte_2{
-        animation-name: prix;
-        animation-duration: 800ms;
-        animation-fill-mode: forwards;
-        transition-timing-function: ease-in-out;
-        &_couper{
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            animation-duration: 800ms;
-            animation-fill-mode: forwards;
-            transition-timing-function: ease-in-out;
-            margin-right: 15px;
-        }
-    }
-    & .texte_gras--modifier{
-        padding: 0;
-    }
-}
-@keyframes ok{
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
-@keyframes block{
-    0%{
-        transform: translateX(100%);
-    }
-}
-@keyframes prix{
-    0%{
-        width: 300px;
-    }
-    100%{
-        width: 240px;
     }
 }
