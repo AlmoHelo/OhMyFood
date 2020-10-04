@@ -344,6 +344,7 @@ $breakpoint: (
         }
     }
 }
+
 .clic:hover{                                    /*animation par ligne version mobile*/
     & .texte_2{
         animation-name: prix-mobile;
@@ -477,19 +478,6 @@ footer ul{
         & i {
             font-size: 20px;
         }
-    }
-}
-.clic:hover{                                    /*animation par ligne version mobile*/
-    & .texte_2{
-        animation-name: prix-tablette;
-    }
-}
-@keyframes prix-tablette{
-    0%{
-        width: 640px;
-    }
-    100%{
-        width: 580px;
     }
 }
 /*animation coeur*/
