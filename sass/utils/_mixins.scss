@@ -1,0 +1,83 @@
+@mixin police1 {
+    font-family: "Shand", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+@mixin police2 {
+    font-family: "Roboto", "trebuchet MS", sans-serif;
+}
+@mixin titreh2{
+    font-size: 40px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+@mixin titreh2mobile{
+    font-size: 23px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+@mixin titreh2tablette{
+    font-size: 32px;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+@mixin imagesrestoordi {
+    width: 105%;
+    height: 310px;
+    position: relative;
+    right: 5px;
+}
+@mixin figcaptionordi{
+    width: 100%;
+    height: 130px;               
+    display: flex;
+    align-items: center;
+    background-color: $color-white;  
+    position: relative;
+}
+@mixin bouton_nouveau{
+    width: 120px;
+    height: auto;
+    font-size: 25px;
+    position: relative;
+    border: 1px solid $color-tertiary;
+    background: $color-tertiary;
+    color: rgb(2, 167, 2);
+    left: 72%;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+}
+@mixin imagesrestomobile {
+    width: 105%;             
+    height: 200px;
+    position: relative;
+}
+@mixin figcaption{
+    width: 100%;
+    height: 50px;     
+    padding-top: 20px;
+}
+@mixin bouton-nouveau{
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    left: 65%;
+}
+@mixin imagesrestotablette {
+    width: 105%;
+    height: 200px;
+}
+@mixin figcaptionmobile{
+    height: 70px;     
+    padding-top: 15px;
+}
+@mixin nouveautablette{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    left: 63%;
+}

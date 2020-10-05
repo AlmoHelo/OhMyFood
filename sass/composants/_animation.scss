@@ -1,0 +1,84 @@
+.far:hover{
+    animation: heart_1 600ms both ease-in-out;
+}
+.far{
+    &:hover ~ .fas {
+        display: block;
+        background:-webkit-linear-gradient($color-primary, $color-secondary);
+        -webkit-background-clip:text;
+        color:transparent;
+        animation: animation-heart 800ms ease-in-out;
+    }
+}
+@keyframes heart_1{
+    100%{
+        opacity: 0;
+    }
+    75%{
+        opacity: .25;
+    }
+    50%{
+        opacity: .50;
+    }
+    25%{
+        opacity: .75;
+    }
+    0%{
+        opacity: 1;
+    }
+}
+@keyframes animation-heart{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*animation spinner*/
+.fa-spinner{
+    margin-right: 20px;
+    font-size: 50px;
+    animation-name: spinner;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes spinner{
+    from{
+        transform: rotate(0deg) scale(2);
+    }
+    to{
+        transform: rotate(360deg) scale(1);
+    }
+}
+.construction{
+    position: absolute;
+    animation-name: position_spinner;
+    animation-duration: 5000ms;
+    animation-delay: 1000ms;
+    animation-fill-mode: backwards;
+}
+@keyframes position_spinner{
+    from{
+        font-size: 100px;
+    }
+    to{
+        font-size: 25px;
+    }
+}
+.restaurant{
+    animation: restoconstruction;
+    animation-duration: 2000ms;
+    animation-delay: 2000ms;
+    animation-fill-mode: backwards;
+}
+@keyframes restoconstruction{
+    0%{
+        transform: translateX(-9999px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

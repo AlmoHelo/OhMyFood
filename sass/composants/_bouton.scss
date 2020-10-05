@@ -1,0 +1,23 @@
+/*version ordi*/
+.button{
+    width: 400px;
+    height: 80px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-radius: 35px;
+    color: $color-white;
+    font-size: 30px;
+    line-height: 80px;
+    background: linear-gradient($color-secondary, $color-primary);
+    text-decoration: none;
+}
+
+@media screen and (max-width: map-get($breakpoint, mobile)){
+    .button{
+        width: 220px;
+        height: 50px;
+        margin-top: 30px;
+        font-size: 16px;
+        line-height: 50px;
+    }
+}    

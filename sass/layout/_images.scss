@@ -1,0 +1,38 @@
+/*version ordi*/
+.img{
+    &_resto{
+        @include imagesrestoordi;
+        bottom: 90px;
+    &--modifier{
+        @include imagesrestoordi;
+        height: 500px;
+        bottom: 200px;
+        }
+    }   
+}
+@media screen and (max-width: map-get($breakpoint, mobile)){
+    .img{
+        &_resto{
+        @include imagesrestomobile;
+        bottom: 50px;
+        &--modifier{
+            @include imagesrestomobile;
+            height: 350px;
+            bottom: 125px;
+            }
+        }   
+    }
+}
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
+    .img{
+        &_resto{
+        @include imagesrestotablette;
+        bottom: 40px;
+        &--modifier{
+            @include imagesrestotablette;
+            height: 350px;
+            bottom: 130px;
+            }
+        }   
+    }
+}
