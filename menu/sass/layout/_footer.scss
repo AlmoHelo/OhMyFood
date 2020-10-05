@@ -1,0 +1,87 @@
+/*footer*/
+footer{
+    background-color: $color-grey-dark;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: absolute;
+    top: 1000px;
+    & h3 {
+        @include police1;
+        color: $color-white;
+        font-size: 30px;
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+}
+.enchantee{                 /*footer note enchantée*/
+    top: 1100px;
+}
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    & li{
+        list-style-type: none;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        @include police2;
+        width: 20%;
+        font-size: 23px;
+        & a{
+            text-decoration: none;
+            color: $color-white;
+        }
+    }
+    & i {
+        width: 12px;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: map-get($breakpoint, mobile)){
+    /*footer*/
+    footer{
+        top: 1490px;
+        & h3 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    }
+    .enchantee{
+        top: 1580px;
+    }
+    footer ul{
+        flex-direction: column;
+        & li{
+            width: 100%;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        & i {
+            font-size: 15px;
+        }
+    }
+}
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
+    /*footer*/  
+    footer{
+        top: 1900px;
+        & h3 {
+            font-size: 32px;
+        }
+    }
+    .enchantee{                 /*footer note enchantée*/
+        top: 2030px;
+    }
+    footer ul{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        & li{
+            width: 40%;
+            font-size: 25px;
+            }
+            & i {
+                font-size: 20px;
+            }
+        }
+}

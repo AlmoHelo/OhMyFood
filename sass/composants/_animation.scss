@@ -5,7 +5,7 @@
     &:hover ~ .fas {
         display: block;
         background:-webkit-linear-gradient($color-primary, $color-secondary);
-        -webkit-background-clip:text;
+        -webkit-background-clip: text;
         color:transparent;
         animation: animation-heart 800ms ease-in-out;
     }

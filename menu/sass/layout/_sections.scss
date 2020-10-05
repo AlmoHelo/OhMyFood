@@ -1,0 +1,179 @@
+/*section*/
+.menu{
+    width: 100%;
+    background-color: $color-grey-light;
+    border-radius: 40px 40px 40px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 430px;
+}
+.titre{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    & h1{
+        width: 100%;
+        height: 40px;
+        @include police1;
+        font-weight: bold;
+        font-size: 35px;
+    }
+    & .far{
+        font-size: 35px;
+        z-index: 1;
+        position: absolute;
+        right: 68%;
+    }
+    & .fas{
+        position: absolute;
+        right: 68%;
+        font-size: 35px;
+        display: none;
+    }
+}
+.repas{
+    width: 30%;
+    @include police2;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    & h2{
+        width: 65px;
+        font-size: 28px;
+        border-bottom: 4px solid $color-tertiary;
+        margin-bottom: 20px;
+        padding-bottom:5px ;
+    }
+    & .liste{
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    & li{
+        list-style-type: none;
+        margin-bottom: 15px;
+        width: 90%;
+        height: 75px;
+        box-shadow: 2px 2px 6px $color-grey-dark;
+        border-radius: 15px;
+        padding-left: 30px;        
+    }
+}
+.texte{
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    &_gras{
+        font-weight: bold;
+        &--modifier{
+            font-weight: bold;
+            margin-right: 15px;
+            padding-right: 10px;
+        }
+    }
+    & p{
+        margin-top: 10px;
+    }
+}
+.texte_2{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: map-get($breakpoint, mobile)){
+    /*section*/
+    .menu{
+        padding: 0;
+        border-radius: 30px 30px 0 0;
+        top: 260px;
+    }
+    .titre{
+        width: 100%;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        & h1{
+            font-size: 25px;
+            width: 250px;
+        }
+        & .far{
+            font-size: 22px;
+            right: 11%;
+        }
+        & .fas{
+            position: absolute;
+            right: 11%;
+            font-size: 22px;
+            display: none;
+        }
+    }
+    .repas{
+        width: 96%;
+        margin: auto;
+        & h2{
+            font-size: 18px;
+            width: 40px;
+            margin-left: 10px;
+            margin-bottom: 20px;
+        }
+        & .liste{
+            & .texte{
+            width: 95%;
+            padding-left: 10px;
+                &_gras{
+                    font-size: 15px;
+                    &--modifier{
+                        font-size: 16px;
+                    }
+                }
+            }
+            & p{
+                font-size: 13px;
+            }
+        }
+    }
+}
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
+    /*section*/
+    .menu{
+        top: 450px;
+        border-radius: 15px;
+        padding: 0;
+    }
+    .titre{
+        & h1{
+            font-size: 30px;
+            margin-left: 30px;
+        }
+        & .far{
+            font-size: 30px;
+            right: 52%;
+        }
+        & .fas{
+            position: absolute;
+            right: 52%;
+            font-size: 30px;
+            display: none;
+        }
+    }
+    .repas{
+        width: 100%;
+        & h2{
+            font-size: 25px;
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        & .liste{
+            width: 95%;
+            & .texte{
+                margin: auto;
+                margin-bottom: 25px;
+                &_gras{
+                    margin-top: 10px;
+                }
+                & p{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

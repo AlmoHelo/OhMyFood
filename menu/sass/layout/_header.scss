@@ -1,0 +1,45 @@
+/*header*/
+header{
+    overflow: hidden;
+    height: 500px;
+}
+.banniere {
+    width: 100%;
+    background-color: $color-white; 
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    position: absolute;
+    z-index: 1;
+    & i {
+        font-size: 40px;
+        color: black;
+        margin-left: 20px;
+    }
+    & img{
+        margin:auto;
+    }
+}
+@media screen and (max-width: map-get($breakpoint, mobile)){
+    /*header*/
+    .logo{
+        width: 165px;
+    }
+    .banniere{
+        & i{
+            font-size: 20px;
+        }   
+    }
+}
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
+    /*header*/
+    .logo{
+        width: 250px;
+    }
+    .banniere{
+        & i{
+            font-size: 30px;
+        }
+    }
+}
