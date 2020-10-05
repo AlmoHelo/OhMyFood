@@ -38,47 +38,52 @@
 
 /*animation spinner*/
 .fa-spinner{
-    margin-right: 20px;
-    font-size: 50px;
-    animation-name: spinner;
-    animation-duration: 2000ms;
+    animation-name: spinner_rotate;
+    animation-iteration-count: 4;
+    animation-duration: 1000ms;
     animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
+    transform-origin: center;
 }
-@keyframes spinner{
+@keyframes spinner_rotate{
     from{
-        transform: rotate(0deg) scale(2);
+        transform: rotate(0deg);
     }
     to{
-        transform: rotate(360deg) scale(1);
+        transform: rotate(360deg);
     }
 }
 .construction{
     position: absolute;
     animation-name: position_spinner;
-    animation-duration: 5000ms;
+    animation-duration: 3000ms;
     animation-delay: 1000ms;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
 }
 @keyframes position_spinner{
-    from{
-        font-size: 100px;
+    0%{
+        opacity: 1;
     }
-    to{
-        font-size: 25px;
+    97%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }
 .restaurant{
     animation: restoconstruction;
-    animation-duration: 2000ms;
-    animation-delay: 2000ms;
+    animation-duration: 1000ms;
+    animation-delay: 3000ms;
     animation-fill-mode: backwards;
 }
 @keyframes restoconstruction{
     0%{
-        transform: translateX(-9999px);
+        opacity: 0;
+    }
+    97%{
+        opacity: 0;
     }
     100%{
-        transform: translateX(0);
+        opacity: 1;
     }
 }

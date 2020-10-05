@@ -88,18 +88,22 @@ section {
 .construction{
     width: 100%;
     display: flex;
-    align-items: center;
-    font-size: 25px;
+    padding: auto;
+    font-size: 60px;
     position: relative;
-    top: 150px;
-    left: 150px;
+    top: 350px;
+    color: $color-secondary;
+    & i {
+        margin-left: 30%;
+        margin-right: 20px;
+    }
 }
 @media screen and (max-width: map-get($breakpoint, mobile)){
     section {
         & h2{
             @include titreh2mobile;
             margin-top: 40px;
-            margin-bottom: 20px;
+            margin-bottom: -30px;
         }
         & .restaurant{
             width: 90%;
@@ -157,6 +161,14 @@ section {
     .nouveau2{
         @include bouton-nouveau;
         bottom: 111%;
+    }
+    .construction{
+        font-size: 30px;
+        top: 150px;
+        & i {
+            margin-left: 20px;
+            margin-right: 10px;
+        }
     }
 }
 @media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
@@ -216,5 +228,13 @@ section {
     .nouveau2{
         @include nouveautablette;
         bottom: 158%;
+    }
+    .construction{
+        font-size: 40px;
+        top: 200px;
+        & i {
+            margin-left: 180px;
+            margin-right: 10px;
+        }
     }
 }
