@@ -11,12 +11,13 @@
     margin-left: 30px;
     margin-bottom: 20px;
     margin-top: 20px;
+    font-weight: bold;
 }
 @mixin titreh2mobile{
     font-size: 23px;
     margin-left: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-top: 30px;
 }
 @mixin titreh2tablette{
     font-size: 32px;
