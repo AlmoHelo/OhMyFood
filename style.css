@@ -498,7 +498,7 @@ section a {
     margin-bottom: 25px;
     margin-top: 30px;
     margin-top: 40px;
-    margin-bottom: -30px;
+    margin-bottom: -50px;
   }
   section .restaurant {
     width: 90%;
@@ -558,7 +558,7 @@ section a {
     height: 30px;
     font-size: 15px;
     left: 65%;
-    bottom: 62%;
+    bottom: 67%;
   }
 
   .nouveau2 {
@@ -566,7 +566,7 @@ section a {
     height: 30px;
     font-size: 15px;
     left: 65%;
-    bottom: 111%;
+    bottom: 400%;
   }
 
   .construction {

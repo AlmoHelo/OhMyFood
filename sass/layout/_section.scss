@@ -103,7 +103,7 @@ section {
         & h2{
             @include titreh2mobile;
             margin-top: 40px;
-            margin-bottom: -30px;
+            margin-bottom: -50px;
         }
         & .restaurant{
             width: 90%;
@@ -156,11 +156,11 @@ section {
     }
     .nouveau1{
         @include bouton-nouveau;
-        bottom: 62%;
+        bottom: 67%;
     }
     .nouveau2{
         @include bouton-nouveau;
-        bottom: 111%;
+        bottom: 400%;
     }
     .construction{
         font-size: 30px;
