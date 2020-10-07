@@ -461,20 +461,19 @@ section a {
   display: none;
 }
 
-.nouveau1 {
-  width: 80px;
-  height: 30px;
-  font-size: 15px;
-  left: 65%;
-  bottom: 98%;
-}
-
-.nouveau2 {
-  width: 80px;
-  height: 30px;
-  font-size: 15px;
-  left: 65%;
-  bottom: 161%;
+.nouveau1, .nouveau2 {
+  width: 120px;
+  height: 40px;
+  font-size: 25px;
+  border: 1px solid #99E2D0;
+  background: #99E2D0;
+  color: #02a702;
+  line-height: 40px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 170%;
+  left: 70%;
 }
 
 .construction {
@@ -498,7 +497,7 @@ section a {
     margin-bottom: 25px;
     margin-top: 30px;
     margin-top: 40px;
-    margin-bottom: -50px;
+    margin-bottom: -15%;
   }
   section .restaurant {
     width: 90%;
@@ -553,20 +552,13 @@ section a {
     top: 25%;
   }
 
-  .nouveau1 {
+  .nouveau1, .nouveau2 {
     width: 80px;
     height: 30px;
     font-size: 15px;
-    left: 65%;
-    bottom: 67%;
-  }
-
-  .nouveau2 {
-    width: 80px;
-    height: 30px;
-    font-size: 15px;
-    left: 65%;
-    bottom: 400%;
+    line-height: 30px;
+    bottom: 180%;
+    left: 68%;
   }
 
   .construction {
@@ -650,20 +642,13 @@ section a {
     top: 20%;
   }
 
-  .nouveau1 {
+  .nouveau1, .nouveau2 {
     width: 100px;
-    height: 30px;
+    height: 35px;
     font-size: 20px;
-    left: 63%;
-    bottom: 88%;
-  }
-
-  .nouveau2 {
-    width: 100px;
-    height: 30px;
-    font-size: 20px;
-    left: 63%;
-    bottom: 158%;
+    line-height: 35px;
+    left: 62%;
+    bottom: 140%;
   }
 
   .construction {

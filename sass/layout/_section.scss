@@ -77,13 +77,8 @@ section {
         display: none;
     }
 }
-.nouveau1{
-    @include bouton-nouveau;
-    bottom: 98%;
-}
-.nouveau2{
-    @include bouton-nouveau;
-    bottom: 161%;
+.nouveau1, .nouveau2{
+    @include boutonnouveau;
 }
 .construction{
     width: 100%;
@@ -103,7 +98,7 @@ section {
         & h2{
             @include titreh2mobile;
             margin-top: 40px;
-            margin-bottom: -50px;
+            margin-bottom: -15%;
         }
         & .restaurant{
             width: 90%;
@@ -154,13 +149,8 @@ section {
             top: 25%;
         }
     }
-    .nouveau1{
-        @include bouton-nouveau;
-        bottom: 67%;
-    }
-    .nouveau2{
-        @include bouton-nouveau;
-        bottom: 400%;
+    .nouveau1, .nouveau2{
+        @include bouton_nouveau_portable;
     }
     .construction{
         font-size: 30px;
@@ -221,13 +211,8 @@ section {
             top: 20%;
         }
     }
-    .nouveau1{
-        @include nouveautablette;
-        bottom: 88%;
-    }
-    .nouveau2{
-        @include nouveautablette;
-        bottom: 158%;
+    .nouveau1, .nouveau2{
+        @include boutonnouveautablette;
     }
     .construction{
         font-size: 40px;
