@@ -490,6 +490,9 @@ section a {
 }
 
 @media screen and (max-width: 767px) {
+  section {
+    padding-bottom: 30px;
+  }
   section h2 {
     font-size: 23px;
     margin-left: 20px;

@@ -91,6 +91,7 @@ section {
 }
 @media screen and (max-width: map-get($breakpoint, mobile)){
     section {
+        padding-bottom: 30px;
         & h2{
             @include titreh2mobile;
             margin-top: 40px;
