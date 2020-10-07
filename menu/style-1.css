@@ -439,19 +439,27 @@ header {
   .repas {
     width: 96%;
     margin: auto;
+    margin-bottom: 10px;
   }
   .repas h2 {
     font-size: 18px;
     width: 40px;
     margin-left: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .repas .liste {
+    width: 100%;
+    margin: 0;
   }
   .repas .liste .texte {
     width: 95%;
+    margin: 5px 5px 15px 5px;
     padding-left: 10px;
   }
   .repas .liste .texte_gras {
     font-size: 15px;
+    margin-top: 15px;
   }
   .repas .liste .texte_gras--modifier {
     font-size: 16px;
