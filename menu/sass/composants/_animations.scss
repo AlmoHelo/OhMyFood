@@ -139,8 +139,26 @@ span{
             margin-right: 15px;
         }
     }
-    & .texte_gras--modifier{
+    & .texte_gras{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        animation-name: plat;
+        animation-duration: 800ms;
+        animation-fill-mode: forwards;
+        transition-timing-function: ease-in-out;
+        &--modifier{
         padding: 0;
+        margin-right: 0;
+        }
+    }
+}
+@keyframes plat{
+    0%{
+        width: 110%;
+    }
+    100%{
+        width: 75%;
     }
 }
 @keyframes ok{
@@ -161,7 +179,7 @@ span{
         width: 380px;
     }
     100%{
-        width: 330px;
+        width: 320px;
     }
 }
 @media screen and (max-width: map-get($breakpoint, mobile)){
@@ -175,22 +193,22 @@ span{
             width: 300px;
         }
         100%{
-            width: 240px;
+            width: 220px;
         }
     }
 }
 @media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
     .clic:hover{                                    /*animation par ligne version mobile*/
         & .texte_2{
-            animation-name: prix-mobile;
+            animation-name: prix-tablette;
         }
     }
-    @keyframes prix-mobile{
+    @keyframes prix-tablette{
         0%{
             width: 650px;
         }
         100%{
-            width: 590px;
+            width: 570px;
         }
     }
 }

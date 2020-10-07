@@ -79,6 +79,7 @@
 .texte_2{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 @media screen and (max-width: map-get($breakpoint, mobile)){
     /*section*/
