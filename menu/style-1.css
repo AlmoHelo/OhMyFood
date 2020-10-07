@@ -37,7 +37,7 @@ html, body, div, span, h1, h2, h3, p, a, img, ul, li, figure, figcaption, footer
     font-size: 18px;
     line-height: 50px;
     margin: auto;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 50px;
   }
 }
