@@ -504,7 +504,7 @@ section a {
   section .restaurant {
     width: 90%;
     height: 210px;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 2px 2px 6px #eaeaea;
     margin-bottom: 20px;
