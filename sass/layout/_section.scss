@@ -28,8 +28,6 @@ section {
         overflow: hidden;
         & p {
             font-size: 27px;
-            margin: 0px;
-            margin-top: 2px;
         }
     }
     & a{
@@ -39,18 +37,15 @@ section {
 }
 .figcap-1{
     @include figcaptionordi;
-    bottom: 157px;
     &-2{
         @include figcaptionordi;
-        bottom: 350px;
+        bottom: 300px;
     }
     &-2-3{
         @include figcaptionordi;
-        bottom: 115px;
     }
     &-2-3-4{
         @include figcaptionordi;
-        bottom: 115px;
     }
 }
 .figcap{
@@ -112,24 +107,21 @@ section {
             width: 100%;
             border-radius: 20px;
             & p {
-                font-size: 16px;
+                font-size: 15px;
             }
         }
     }
     .figcap-1{
         @include figcaptionmobile;
-        bottom: 90px;
         &-2{
             @include figcaptionmobile;
-            bottom: 240px;
+            bottom: 210px;
         }
         &-2-3{
             @include figcaptionmobile;
-            bottom: 65px;
         }
         &-2-3-4{
             @include figcaptionmobile;
-            bottom: 65px;
         }
     }
     .figcap{
@@ -179,19 +171,16 @@ section {
         }
     }
     .figcap-1{
-        @include figcaptionordi;
-        bottom: 100px;
+        @include figcaptiontablette;
         &-2{
-            @include figcaptionordi;
-            bottom: 250px;
+            @include figcaptiontablette;
+            bottom: 210px;
         }
         &-2-3{
-            @include figcaptionordi;
-            bottom: 65px;
+            @include figcaptiontablette;
         }
         &-2-3-4{
-            @include figcaptionordi;
-            bottom: 65px;
+            @include figcaptiontablette;
         }
     }
     .figcap{

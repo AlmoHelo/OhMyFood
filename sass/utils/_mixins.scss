@@ -33,7 +33,8 @@
 }
 @mixin figcaptionordi{
     width: 100%;
-    height: 130px;               
+    height: 130px;
+    bottom: 110px;               
     display: flex;
     align-items: center;
     background-color: $color-white;  
@@ -50,16 +51,35 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 170%;
+    bottom: 210%;
     left: 70%;
+}
+@mixin imagesrestomobile {
+    width: 105%;             
+    height: 200px;
+    position: relative;
+}
+@mixin figcaptionmobile{
+    height: 70px;     
+    padding-top: 10px;
+    bottom: 55px;
 }
 @mixin bouton_nouveau_portable{
     width: 80px;
     height: 30px;
     font-size: 15px;
     line-height: 30px;
-    bottom: 180%;
+    bottom: 225%;
     left: 68%;
+}
+@mixin imagesrestotablette {
+    width: 105%;
+    height: 200px;
+}
+@mixin figcaptiontablette{
+    height: 70px;     
+    padding-top: 30px;
+    bottom: 60px;
 }
 @mixin boutonnouveautablette{
     width: 100px;
@@ -67,29 +87,5 @@
     font-size: 20px;
     line-height: 35px;
     left: 62%;
-    bottom: 140%;
-}
-@mixin imagesrestomobile {
-    width: 105%;             
-    height: 200px;
-    position: relative;
-}
-@mixin figcaption{
-    width: 100%;
-    height: 50px;     
-    padding-top: 20px;
-}
-@mixin imagesrestotablette {
-    width: 105%;
-    height: 200px;
-}
-@mixin figcaptionmobile{
-    height: 70px;     
-    padding-top: 15px;
-}
-@mixin nouveautablette{
-    width: 100px;
-    height: 30px;
-    font-size: 20px;
-    left: 63%;
+    bottom: 190%;
 }
