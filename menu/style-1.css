@@ -186,6 +186,7 @@ span {
   animation-duration: 800ms;
   animation-fill-mode: forwards;
   transition-timing-function: ease-in-out;
+  margin-right: 10px;
 }
 .clic:hover .texte_2_couper {
   text-overflow: ellipsis;
@@ -236,7 +237,7 @@ span {
     width: 380px;
   }
   100% {
-    width: 320px;
+    width: 250px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -411,13 +412,12 @@ header {
 @media screen and (max-width: 767px) {
   /*section*/
   .menu {
-    padding: 0;
     border-radius: 30px 30px 0 0;
     top: 260px;
   }
 
   .titre {
-    width: 100%;
+    width: 90%;
     margin-left: 10px;
     margin-bottom: 10px;
   }
@@ -438,7 +438,7 @@ header {
 
   .repas {
     width: 96%;
-    margin: auto;
+    margin: 0;
     margin-bottom: 10px;
   }
   .repas h2 {
@@ -453,8 +453,8 @@ header {
     margin: 0;
   }
   .repas .liste .texte {
-    width: 95%;
-    margin: 5px 5px 15px 5px;
+    width: 90%;
+    margin: 10px 0px 15px 10px;
     padding-left: 10px;
   }
   .repas .liste .texte_gras {
@@ -462,7 +462,9 @@ header {
     margin-top: 15px;
   }
   .repas .liste .texte_gras--modifier {
-    font-size: 16px;
+    font-size: 14px;
+    width: 5%;
+    margin-right: 15px;
   }
   .repas .liste p {
     font-size: 13px;
@@ -613,7 +615,7 @@ footer ul i {
     flex-direction: column;
   }
   footer ul li {
-    width: 100%;
+    width: 80%;
     font-size: 18px;
     margin-bottom: 10px;
   }

@@ -129,6 +129,7 @@ span{
         animation-duration: 800ms;
         animation-fill-mode: forwards;
         transition-timing-function: ease-in-out;
+        margin-right: 10px;
         &_couper{
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -179,7 +180,7 @@ span{
         width: 380px;
     }
     100%{
-        width: 320px;
+        width: 250px;
     }
 }
 @media screen and (max-width: map-get($breakpoint, mobile)){
