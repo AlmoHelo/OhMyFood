@@ -454,7 +454,7 @@ header {
   }
   .repas .liste .texte {
     width: 90%;
-    margin: 10px 0px 15px 10px;
+    margin: 10px 0px 15px 15px;
     padding-left: 10px;
   }
   .repas .liste .texte_gras {
@@ -600,7 +600,7 @@ footer ul i {
 @media screen and (max-width: 767px) {
   /*footer*/
   footer {
-    top: 1490px;
+    top: 1460px;
   }
   footer h3 {
     font-size: 20px;
