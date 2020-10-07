@@ -39,7 +39,7 @@
 /*animation spinner*/
 .fa-spinner{
     animation-name: spinner_rotate;
-    animation-iteration-count: 4;
+    animation-iteration-count: 3;
     animation-duration: 1000ms;
     animation-fill-mode: forwards;
     transform-origin: center;
@@ -55,7 +55,7 @@
 .construction{
     position: absolute;
     animation-name: position_spinner;
-    animation-duration: 3000ms;
+    animation-duration: 2000ms;
     animation-delay: 1000ms;
     animation-fill-mode: forwards;
 }
@@ -73,7 +73,7 @@
 .restaurant{
     animation: restoconstruction;
     animation-duration: 1000ms;
-    animation-delay: 3000ms;
+    animation-delay: 2000ms;
     animation-fill-mode: backwards;
 }
 @keyframes restoconstruction{
