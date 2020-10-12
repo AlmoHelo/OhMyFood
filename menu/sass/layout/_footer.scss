@@ -1,5 +1,5 @@
 /*footer*/
-footer{
+footer {
     background-color: $color-grey-dark;
     width: 100%;
     padding-top: 15px;
@@ -14,20 +14,21 @@ footer{
         margin-bottom: 15px;
     }
 }
-.enchantee{                 /*footer note enchantée*/
+.enchantee {
+    /*footer note enchantée*/
     top: 1100px;
 }
-footer ul{
+footer ul {
     display: flex;
     justify-content: space-between;
-    & li{
+    & li {
         list-style-type: none;
         margin-left: 20px;
         margin-bottom: 20px;
         @include police2;
         width: 20%;
         font-size: 23px;
-        & a{
+        & a {
             text-decoration: none;
             color: $color-white;
         }
@@ -38,21 +39,21 @@ footer ul{
         margin-right: 10px;
     }
 }
-@media screen and (max-width: map-get($breakpoint, mobile)){
+@media screen and (max-width: map-get($breakpoint, mobile)) {
     /*footer*/
-    footer{
+    footer {
         top: 1460px;
         & h3 {
             font-size: 20px;
             margin-top: 10px;
         }
     }
-    .enchantee{
+    .enchantee {
         top: 1560px;
     }
-    footer ul{
+    footer ul {
         flex-direction: column;
-        & li{
+        & li {
             width: 80%;
             font-size: 18px;
             margin-bottom: 10px;
@@ -62,26 +63,27 @@ footer ul{
         }
     }
 }
-@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
-    /*footer*/  
-    footer{
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)) {
+    /*footer*/
+    footer {
         top: 1900px;
         & h3 {
             font-size: 32px;
         }
     }
-    .enchantee{                 /*footer note enchantée*/
+    .enchantee {
+        /*footer note enchantée*/
         top: 2030px;
     }
-    footer ul{
+    footer ul {
         flex-wrap: wrap;
         justify-content: space-around;
-        & li{
+        & li {
             width: 40%;
             font-size: 25px;
-            }
-            & i {
-                font-size: 20px;
-            }
         }
+        & i {
+            font-size: 20px;
+        }
+    }
 }

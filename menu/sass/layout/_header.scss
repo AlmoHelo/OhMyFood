@@ -1,15 +1,17 @@
 /*header*/
-header{
+header {
     overflow: hidden;
     height: 500px;
 }
 .banniere {
     width: 100%;
-    background-color: $color-white; 
+    background-color: $color-white;
     display: flex;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px; 
+    padding: {
+        top: 20px;
+        bottom: 20px;
+    }
     position: absolute;
     z-index: 1;
     & i {
@@ -17,28 +19,28 @@ header{
         color: black;
         margin-left: 20px;
     }
-    & img{
-        margin:auto;
+    & img {
+        margin: auto;
     }
 }
-@media screen and (max-width: map-get($breakpoint, mobile)){
+@media screen and (max-width: map-get($breakpoint, mobile)) {
     /*header*/
-    .logo{
+    .logo {
         width: 165px;
     }
-    .banniere{
-        & i{
+    .banniere {
+        & i {
             font-size: 20px;
-        }   
+        }
     }
 }
-@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)) {
     /*header*/
-    .logo{
+    .logo {
         width: 250px;
     }
-    .banniere{
-        & i{
+    .banniere {
+        & i {
             font-size: 30px;
         }
     }

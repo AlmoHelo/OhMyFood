@@ -1,184 +1,178 @@
 /*section*/
-.menu{
+.menu {
     width: 100%;
     background-color: $color-grey-light;
-    border-radius: 40px 40px 40px 40px;
+    border-radius: 40px;
     display: flex;
     flex-wrap: wrap;
     position: absolute;
     top: 430px;
 }
-.titre{
+.titre {
     width: 100%;
     display: flex;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    margin-left: 20px;
-    & h1{
+    margin: {
+        top: 30px;
+        bottom: 40px;
+        left: 20px;
+    }
+    & h1 {
         width: 100%;
         height: 40px;
         @include police1;
-        font-weight: bold;
-        font-size: 35px;
+        font: {
+            weight: bold;
+            size: 35px;
+        }
     }
-    & .far{
+    & .far {
         font-size: 35px;
         z-index: 1;
         position: absolute;
         right: 68%;
     }
-    & .fas{
-        position: absolute;
-        right: 68%;
-        font-size: 35px;
+    & .fas {
+        @extend .far;
         display: none;
     }
 }
-.repas{
+.repas {
     width: 30%;
     @include police2;
     margin-bottom: 30px;
     margin-left: 20px;
-    & h2{
+    & h2 {
         width: 65px;
         font-size: 28px;
         border-bottom: 4px solid $color-tertiary;
         margin-bottom: 20px;
-        padding-bottom:5px ;
+        padding-bottom: 5px;
     }
-    & .liste{
+    & .liste {
         overflow: hidden;
         margin-bottom: 30px;
     }
-    & li{
+    & li {
         list-style-type: none;
         margin-bottom: 15px;
         width: 90%;
         height: 75px;
-        box-shadow: 2px 2px 6px $color-grey-dark;
+        @include shadow(2px, 2px, 6px, $color-grey-dark);
         border-radius: 15px;
-        padding-left: 30px;     
+        padding-left: 30px;
     }
 }
-.texte{
+.texte {
     height: 65px;
     display: flex;
     flex-direction: column;
-    &_gras{
+    &_gras {
         font-weight: bold;
-        &--modifier{
+        &--modifier {
             font-weight: bold;
             margin-right: 15px;
             padding-right: 10px;
         }
     }
-    & p{
+    & p {
         margin-top: 10px;
     }
 }
-.texte_2{
+.texte_2 {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-@media screen and (max-width: map-get($breakpoint, mobile)){
+@media screen and (max-width: map-get($breakpoint, mobile)) {
     /*section*/
-    .menu{
+    .menu {
         border-radius: 30px 30px 0 0;
         top: 260px;
     }
-    .titre{
+    .titre {
         width: 90%;
         margin-left: 10px;
         margin-bottom: 10px;
-        & h1{
+        & h1 {
             font-size: 25px;
             width: 250px;
         }
-        & .far{
+        & .far,
+        .fas {
             font-size: 22px;
             right: 11%;
-        }
-        & .fas{
-            position: absolute;
-            right: 11%;
-            font-size: 22px;
-            display: none;
         }
     }
-    .repas{
+    .repas {
         width: 96%;
         margin: 0;
         margin-bottom: 10px;
-        & h2{
+        & h2 {
             font-size: 18px;
             width: 40px;
-            margin-left: 10px;
-            margin-bottom: 10px;
-            margin-top: 10px;
+            margin: {
+                left: 10px;
+                bottom: 10px;
+                top: 10px;
+            }
         }
-        & .liste{
+        & .liste {
             width: 100%;
             margin: 0;
-            & .texte{
-            width: 90%;
-            margin: 10px 0px 15px 15px;
-            padding-left: 10px;
-                &_gras{
+            & .texte {
+                width: 90%;
+                margin: 10px 0px 15px 15px;
+                padding-left: 10px;
+                &_gras {
                     font-size: 15px;
                     margin-top: 15px;
-                    &--modifier{
+                    &--modifier {
                         font-size: 14px;
                         width: 5%;
                         margin-right: 15px;
                     }
                 }
             }
-            & p{
+            & p {
                 font-size: 13px;
             }
         }
     }
 }
-@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)) {
     /*section*/
-    .menu{
+    .menu {
         top: 450px;
         border-radius: 15px;
         padding: 0;
     }
-    .titre{
-        & h1{
+    .titre {
+        & h1 {
             font-size: 30px;
             margin-left: 30px;
         }
-        & .far{
+        & .far,
+        .fas {
             font-size: 30px;
             right: 52%;
-        }
-        & .fas{
-            position: absolute;
-            right: 52%;
-            font-size: 30px;
-            display: none;
         }
     }
-    .repas{
+    .repas {
         width: 100%;
-        & h2{
+        & h2 {
             font-size: 25px;
             margin-left: 30px;
             margin-bottom: 20px;
         }
-        & .liste{
+        & .liste {
             width: 95%;
-            & .texte{
+            & .texte {
                 margin: auto;
                 margin-bottom: 25px;
-                &_gras{
+                &_gras {
                     margin-top: 10px;
                 }
-                & p{
+                & p {
                     font-size: 20px;
                 }
             }

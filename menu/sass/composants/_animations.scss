@@ -1,107 +1,107 @@
 /*animation coeur*/
-.far:hover{
+.far:hover {
     animation: heart_1 600ms both ease-in-out;
 }
-.far{
+.far {
     &:hover ~ .fas {
         display: block;
-        background:-webkit-linear-gradient($color-primary, $color-secondary);
-        background-clip:text;
-        color:transparent;
+        background: -webkit-linear-gradient($color-primary, $color-secondary);
+        background-clip: text;
+        color: transparent;
         animation: animation-heart 800ms ease-in-out;
     }
 }
-@keyframes heart_1{
-    100%{
+@keyframes heart_1 {
+    100% {
         opacity: 0;
     }
-    75%{
-        opacity: .25;
+    75% {
+        opacity: 0.25;
     }
-    50%{
-        opacity: .50;
+    50% {
+        opacity: 0.5;
     }
-    25%{
-        opacity: .75;
+    25% {
+        opacity: 0.75;
     }
-    0%{
+    0% {
         opacity: 1;
     }
 }
-@keyframes animation-heart{
-    from{
+@keyframes animation-heart {
+    from {
         opacity: 0;
     }
-    to{
+    to {
         opacity: 1;
     }
 }
 /*animation menu*/
-.liste{
-    transform-origin:bottom;
+.liste {
+    transform-origin: bottom;
     animation-name: liste;
     animation-duration: 2000ms;
     animation-fill-mode: both;
     animation-delay: 500ms;
 }
-@keyframes liste{
-    0%{
-        opacity:0;
+@keyframes liste {
+    0% {
+        opacity: 0;
     }
-    10%{
+    10% {
         opacity: 1;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
-.anim{
+.anim {
     animation-name: animation-liste;
-    transform-origin:bottom;
+    transform-origin: bottom;
     animation-duration: 800ms;
     animation-fill-mode: both;
-    &_2{
+    &_2 {
         animation-name: animation-liste;
         transform-origin: bottom;
         animation-duration: 1000ms;
         animation-fill-mode: both;
     }
-    &_3{
+    &_3 {
         animation-name: animation-liste;
         transform-origin: bottom;
         animation-duration: 1200ms;
         animation-fill-mode: both;
     }
-    &_4{
+    &_4 {
         animation-name: animation-liste;
         transform-origin: bottom;
         animation-duration: 1400ms;
         animation-fill-mode: both;
     }
 }
-@keyframes animation-liste{
-    0%{
+@keyframes animation-liste {
+    0% {
         transform: translateY(-700%);
         opacity: 0;
     }
-    80%{
+    80% {
         transform: translateY(-10%);
-        opacity: 0.80;
+        opacity: 0.8;
     }
-    90%{
+    90% {
         transform: translateY(-5%);
-        opacity: 0.90;
+        opacity: 0.9;
     }
-    100%{
+    100% {
         transform: translateY(0%);
-        opacity:1;
+        opacity: 1;
     }
 }
 /*animation par ligne*/
-span{
+span {
     display: none;
 }
-.clic:hover{
+.clic:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -113,7 +113,7 @@ span{
         background-color: $color-tertiary;
         animation-name: block;
         animation-duration: 1000ms;
-        & .anim_block_ok{
+        & .anim_block_ok {
             display: flex;
             justify-content: center;
             line-height: 80px;
@@ -124,13 +124,13 @@ span{
             color: $color-white;
         }
     }
-    & .texte_2{
+    & .texte_2 {
         animation-name: prix;
         animation-duration: 800ms;
         animation-fill-mode: forwards;
         transition-timing-function: ease-in-out;
         margin-right: 10px;
-        &_couper{
+        &_couper {
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
@@ -140,7 +140,7 @@ span{
             margin-right: 15px;
         }
     }
-    & .texte_gras{
+    & .texte_gras {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
@@ -148,67 +148,69 @@ span{
         animation-duration: 800ms;
         animation-fill-mode: forwards;
         transition-timing-function: ease-in-out;
-        &--modifier{
-        padding: 0;
-        margin-right: 0;
+        &--modifier {
+            padding: 0;
+            margin-right: 0;
         }
     }
 }
-@keyframes plat{
-    0%{
+@keyframes plat {
+    0% {
         width: 110%;
     }
-    100%{
+    100% {
         width: 75%;
     }
 }
-@keyframes ok{
-    from{
+@keyframes ok {
+    from {
         transform: rotate(0deg);
     }
-    to{
+    to {
         transform: rotate(360deg);
     }
 }
-@keyframes block{
-    0%{
+@keyframes block {
+    0% {
         transform: translateX(100%);
     }
 }
-@keyframes prix{
-    0%{
+@keyframes prix {
+    0% {
         width: 380px;
     }
-    100%{
+    100% {
         width: 250px;
     }
 }
-@media screen and (max-width: map-get($breakpoint, mobile)){
-    .clic:hover{                                    /*animation par ligne version mobile*/
-        & .texte_2{
+@media screen and (max-width: map-get($breakpoint, mobile)) {
+    .clic:hover {
+        /*animation par ligne version mobile*/
+        & .texte_2 {
             animation-name: prix-mobile;
         }
     }
-    @keyframes prix-mobile{
-        0%{
+    @keyframes prix-mobile {
+        0% {
             width: 300px;
         }
-        100%{
+        100% {
             width: 220px;
         }
     }
 }
-@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
-    .clic:hover{                                    /*animation par ligne version mobile*/
-        & .texte_2{
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)) {
+    .clic:hover {
+        /*animation par ligne version mobile*/
+        & .texte_2 {
             animation-name: prix-tablette;
         }
     }
-    @keyframes prix-tablette{
-        0%{
+    @keyframes prix-tablette {
+        0% {
             width: 650px;
         }
-        100%{
+        100% {
             width: 570px;
         }
     }

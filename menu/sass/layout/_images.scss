@@ -1,30 +1,30 @@
 /*header*/
-.img_resto{
+.img_resto {
     width: 100%;
     position: relative;
     bottom: 300px;
 }
-.note{                      /*image note enchantée*/
-    bottom : 700px;
+.note {                     /*image note enchantée*/
+    bottom: 700px;
     position: relative;
 }
-@media screen and (max-width: map-get($breakpoint, mobile)){
-    .img_resto{
+@media screen and (max-width: map-get($breakpoint, mobile)) {
+    .img_resto {
         width: 110%;
         top: 70px;
-        right: 10px; 
+        right: 10px;
     }
-    .note{                         /*image note enchantée*/
+    .note {                                  /*image note enchantée*/
         top: -10px;
         height: 400px;
     }
 }
-@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
-    .img_resto{
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)) {
+    .img_resto {
         position: relative;
         top: 0px;
     }
-    .note{
+    .note {
         top: -270px;
     }
 }
