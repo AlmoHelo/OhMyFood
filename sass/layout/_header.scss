@@ -1,23 +1,24 @@
 /*version ordi*/
-header{
+header {
     overflow: hidden;
 }
-.logo{
+.logo {
     width: 20%;
     display: block;
     margin: auto;
     margin-top: 40px;
     margin-bottom: 20px;
 }
-.recherche{                     
+.recherche {
     width: 100%;
     height: 100px;
-    background-color:  $color-grey;
-    box-shadow: 2px 2px 5px #9c9a9a inset;
+    background-color: $color-grey;
+    box-shadow: inset;
+    @include shadow(2px, 2px, 5px, #9c9a9a);
     display: flex;
     justify-content: center;
     align-items: center;
-    & i{
+    & i {
         font-size: 30px;
     }
     & .search {
@@ -29,7 +30,7 @@ header{
         @include police1;
     }
 }
-.titre{
+.titre {
     width: 100%;
     font-size: 45px;
     display: flex;
@@ -38,32 +39,32 @@ header{
     text-align: center;
     background-color: $color-grey-light;
     @include police2;
-    & h1{
+    & h1 {
         width: 90%;
         margin-top: 40px;
         margin-bottom: 30px;
         font-weight: bold;
     }
-    & p{
+    & p {
         width: 90%;
         font-size: 30px;
         margin-bottom: 20px;
     }
 }
 
-@media screen and (max-width: map-get($breakpoint, mobile)){
-    header{
+@media screen and (max-width: map-get($breakpoint, mobile)) {
+    header {
         overflow: hidden;
     }
-    .logo{
+    .logo {
         width: 165px;
         margin-top: 20px;
         margin-bottom: 10px;
     }
-    .recherche{                     
+    .recherche {
         width: 100%;
         height: 50px;
-        & i{
+        & i {
             font-size: 13px;
         }
         & .search {
@@ -71,25 +72,25 @@ header{
             font-size: 13px;
         }
     }
-    .titre{
+    .titre {
         font-size: 25px;
-        & h1{
+        & h1 {
             margin-bottom: 15px;
         }
-        & p{
+        & p {
             font-size: 15px;
             margin-bottom: 0;
         }
     }
 }
-@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
-    .logo{
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)) {
+    .logo {
         width: 200px;
         margin-top: 20px;
     }
-    .recherche{ 
+    .recherche {
         height: 80px;
-        & i{
+        & i {
             font-size: 20px;
         }
         & .search {
@@ -97,7 +98,7 @@ header{
             font-size: 20px;
         }
     }
-    .titre{
+    .titre {
         font-size: 40px;
     }
 }

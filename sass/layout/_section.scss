@@ -6,18 +6,18 @@ section {
     display: flex;
     flex-wrap: wrap;
     @include police2;
-    & h2{
+    & h2 {
         @include titreh2;
         width: 100%;
     }
-    & .restaurant{
+    & .restaurant {
         width: 35%;
         height: 320px;
-        margin:auto;
+        margin: auto;
         margin-bottom: 3%;
         background-color: $color-white;
         border-radius: 30px;
-        box-shadow: 2px 2px 6px $color-grey;
+        @include shadow(2px, 2px, 6px, $color-grey);
     }
     & figure {
         width: 100%;
@@ -30,52 +30,53 @@ section {
             font-size: 27px;
         }
     }
-    & a{
+    & a {
         text-decoration: none;
         color: black;
     }
 }
-.figcap-1{
-    @include figcaptionordi;
-    &-2{
-        @include figcaptionordi;
+.figcap {
+    width: 100%;
+    height: 130px;
+    bottom: 110px;
+    display: flex;
+    align-items: center;
+    background-color: $color-white;
+    position: relative;
+    &-2 {
+        @extend .figcap;
         bottom: 300px;
     }
-    &-2-3{
-        @include figcaptionordi;
-    }
-    &-2-3-4{
-        @include figcaptionordi;
-    }
 }
-.figcap{
-    &_texte{
+.figcap {
+    &_texte {
         margin-right: 15%;
         padding-left: 30px;
         width: 60%;
         @include police2;
-        &_gras{
+        &_gras {
             font-weight: bold;
         }
     }
-    & .far{
+    & .far {
         font-size: 40px;
         color: $color-grey-dark;
         position: absolute;
         right: 15%;
         z-index: 1;
     }
-    & .fas{
+    & .fas {
         font-size: 40px;
         position: absolute;
         right: 15%;
         display: none;
     }
 }
-.nouveau1, .nouveau2{
+.nouveau1,
+.nouveau2 {
     @include boutonnouveau;
 }
-.construction{
+.construction {
     width: 100%;
     display: flex;
     padding: auto;
@@ -89,19 +90,19 @@ section {
         height: 60px;
     }
 }
-@media screen and (max-width: map-get($breakpoint, mobile)){
+@media screen and (max-width: map-get($breakpoint, mobile)) {
     section {
         padding-bottom: 30px;
-        & h2{
+        & h2 {
             @include titreh2mobile;
             margin-bottom: -30px;
         }
-        & .restaurant{
+        & .restaurant {
             width: 90%;
             height: 210px;
-            border-radius: 20px;        
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 2px 2px 6px $color-grey;
+            @include shadow(2px, 2px, 6px, $color-grey);
             margin-bottom: 20px;
         }
         & figure {
@@ -112,40 +113,31 @@ section {
             }
         }
     }
-    .figcap-1{
+    .figcap {
         @include figcaptionmobile;
-        &-2{
+        &-2 {
             @include figcaptionmobile;
             bottom: 210px;
         }
-        &-2-3{
-            @include figcaptionmobile;
-        }
-        &-2-3-4{
-            @include figcaptionmobile;
-        }
     }
-    .figcap{
-        &_texte{
-        padding-left: 10px;
-        height: 70px;
-        margin-right: 20%;
+    .figcap {
+        &_texte {
+            padding-left: 10px;
+            height: 70px;
+            margin-right: 20%;
         }
-        & .far{
-            font-size: 25px;
-            right: 10%;
-            top: 25%;
-        }
-        & .fas{
+        & .far,
+        .fas {
             font-size: 25px;
             right: 10%;
             top: 25%;
         }
     }
-    .nouveau1, .nouveau2{
+    .nouveau1,
+    .nouveau2 {
         @include bouton_nouveau_portable;
     }
-    .construction{
+    .construction {
         font-size: 30px;
         top: 150px;
         & i {
@@ -155,15 +147,15 @@ section {
         }
     }
 }
-@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)) {
     section {
-        & h2{
+        & h2 {
             font-size: 35px;
             @include titreh2tablette;
         }
-        & .restaurant{
+        & .restaurant {
             width: 40%;
-            height: 220px;    
+            height: 220px;
         }
         & figure {
             height: 205px;
@@ -172,40 +164,31 @@ section {
             }
         }
     }
-    .figcap-1{
+    .figcap {
         @include figcaptiontablette;
-        &-2{
+        &-2 {
             @include figcaptiontablette;
             bottom: 210px;
         }
-        &-2-3{
-            @include figcaptiontablette;
-        }
-        &-2-3-4{
-            @include figcaptiontablette;
-        }
     }
-    .figcap{
-        &_texte{
-        padding-left: 20px;
-        height: 70px;
-        margin-bottom: 25px;
+    .figcap {
+        &_texte {
+            padding-left: 20px;
+            height: 70px;
+            margin-bottom: 25px;
         }
-        & .far{
-            font-size: 30px;
-            right: 10%;
-            top: 20%;
-        }
-        & .fas{
+        & .far,
+        .fas {
             font-size: 30px;
             right: 10%;
             top: 20%;
         }
     }
-    .nouveau1, .nouveau2{
+    .nouveau1,
+    .nouveau2 {
         @include boutonnouveautablette;
     }
-    .construction{
+    .construction {
         font-size: 40px;
         top: 200px;
         & i {

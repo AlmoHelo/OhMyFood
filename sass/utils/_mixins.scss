@@ -1,45 +1,44 @@
 @mixin police1 {
     font-family: "Shand", sans-serif;
-    font-style: normal;
-    font-weight: normal;
 }
 @mixin police2 {
     font-family: "Roboto", "trebuchet MS", sans-serif;
 }
-@mixin titreh2{
+@mixin shadow($x, $y, $blur, $color) {
+    box-shadow: $x $y $blur $color;
+}
+@mixin titreh2 {
     font-size: 40px;
-    margin-left: 30px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: {
+        left: 30px;
+        bottom: 20px;
+        top: 20px;
+    }
     font-weight: bold;
 }
-@mixin titreh2mobile{
+@mixin titreh2mobile {
     font-size: 23px;
-    margin-left: 20px;
-    margin-top: 30px;
+    margin: {
+        left: 20px;
+        top: 30px;
+    }
 }
-@mixin titreh2tablette{
+@mixin titreh2tablette {
     font-size: 32px;
-    margin-left: 25px;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    margin: {
+        left: 25px;
+        bottom: 15px;
+        top: 15px;
+    }
 }
 @mixin imagesrestoordi {
     width: 105%;
     height: 310px;
     position: relative;
     right: 5px;
+    bottom: 90px;
 }
-@mixin figcaptionordi{
-    width: 100%;
-    height: 130px;
-    bottom: 110px;               
-    display: flex;
-    align-items: center;
-    background-color: $color-white;  
-    position: relative;
-}
-@mixin boutonnouveau{
+@mixin boutonnouveau {
     width: 120px;
     height: 40px;
     font-size: 25px;
@@ -54,16 +53,17 @@
     left: 70%;
 }
 @mixin imagesrestomobile {
-    width: 105%;             
+    width: 105%;
     height: 200px;
     position: relative;
+    bottom: 50px;
 }
-@mixin figcaptionmobile{
-    height: 70px;     
+@mixin figcaptionmobile {
+    height: 70px;
     padding-top: 10px;
     bottom: 55px;
 }
-@mixin bouton_nouveau_portable{
+@mixin bouton_nouveau_portable {
     width: 80px;
     height: 30px;
     font-size: 15px;
@@ -74,13 +74,14 @@
 @mixin imagesrestotablette {
     width: 105%;
     height: 200px;
+    bottom: 40px;
 }
-@mixin figcaptiontablette{
-    height: 70px;     
+@mixin figcaptiontablette {
+    height: 70px;
     padding-top: 30px;
     bottom: 60px;
 }
-@mixin boutonnouveautablette{
+@mixin boutonnouveautablette {
     width: 100px;
     height: 35px;
     font-size: 20px;

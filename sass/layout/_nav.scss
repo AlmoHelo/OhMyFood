@@ -3,24 +3,24 @@ nav {
     width: 100%;
     margin-bottom: 50px;
     @include police2;
-    & h2{
+    & h2 {
         @include titreh2;
     }
-    & ul{
+    > ul {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        & li{
+        > li {
             width: 25%;
             height: 75px;
             background-color: $color-grey-light;
-            box-shadow: 2px 2px 6px $color-grey;
+            @include shadow(2px, 2px, 6px, $color-grey);
             list-style-type: none;
             border-radius: 20px;
             display: flex;
             align-items: center;
-            padding-left: 30px;       
-            & span{
+            padding-left: 30px;
+            & span {
                 width: 25px;
                 height: 25px;
                 color: $color-white;
@@ -38,40 +38,40 @@ nav {
                 font-size: 30px;
                 margin-right: 25px;
             }
-            & p{
+            & p {
                 font-size: 23px;
                 font-weight: bold;
             }
         }
     }
 }
-.fonctionnement:hover{
+.fonctionnement:hover {
     background-color: $light-color-primary;
-    box-shadow: 3px 3px 6px $color-grey-dark;  
-    & i{
+    @include shadow(3px, 3px, 6px, $color-grey-dark);
+    & i {
         color: $color-primary;
     }
 }
 
-@media screen and (max-width: map-get($breakpoint, mobile)){
+@media screen and (max-width: map-get($breakpoint, mobile)) {
     nav {
         margin-bottom: 15px;
-        & h2{
+        & h2 {
             @include titreh2mobile;
         }
-        & ul{
+        > ul {
             flex-wrap: wrap;
-            & li{
+            > li {
                 width: 75%;
-                margin-bottom: 25px;       
-                & span{
+                margin-bottom: 25px;
+                & span {
                     position: absolute;
                     left: 14px;
                 }
-                & i{
+                & i {
                     font-size: 20px;
                 }
-                & p{
+                & p {
                     font-size: 16px;
                     font-weight: normal;
                 }
@@ -79,24 +79,24 @@ nav {
         }
     }
 }
-@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)){
+@media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)) {
     nav {
-        & h2{
+        & h2 {
             font-size: 35px;
             @include titreh2tablette;
         }
-        & ul{
+        > ul {
             flex-wrap: wrap;
             justify-content: flex-start;
-            & li{
+            > li {
                 width: 40%;
                 margin-left: 30px;
-                margin-bottom: 20px; 
-                & i{
+                margin-bottom: 20px;
+                & i {
                     font-size: 25px;
                     margin-right: 15px;
                 }
-                & p{
+                & p {
                     font-size: 18px;
                 }
             }
