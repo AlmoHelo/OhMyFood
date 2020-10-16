@@ -174,6 +174,7 @@ header {
   background-color: #eaeaea;
   border: 1px solid #eaeaea;
   margin-left: 10px;
+  -webkit-appearance: none;
   font-family: "Shand", sans-serif;
 }
 

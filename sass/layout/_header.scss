@@ -27,6 +27,7 @@ header {
         background-color: $color-grey;
         border: 1px solid $color-grey;
         margin-left: 10px;
+        -webkit-appearance: none;
         @include police1;
     }
 }
