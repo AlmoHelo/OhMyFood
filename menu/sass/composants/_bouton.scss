@@ -10,6 +10,9 @@
     background: linear-gradient($color-secondary, $color-primary);
     text-decoration: none;
     text-align: center;
+    &:hover{
+        opacity: 0.8;
+    }
 }
 @media screen and (max-width: map-get($breakpoint, mobile)) {
     .button {

@@ -1,4 +1,3 @@
-/*animation coeur*/
 .far:hover {
     animation: heart_1 600ms both ease-in-out;
 }
@@ -6,7 +5,7 @@
     &:hover ~ .fas {
         display: block;
         background: -webkit-linear-gradient($color-primary, $color-secondary);
-        background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
         animation: animation-heart 800ms ease-in-out;
     }
@@ -181,7 +180,7 @@ span {
         width: 380px;
     }
     100% {
-        width: 250px;
+        width: 320px;
     }
 }
 @media screen and (max-width: map-get($breakpoint, mobile)) {

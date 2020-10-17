@@ -1,5 +1,4 @@
 /*section*/
-
 .menu {
     width: 100%;
     background-color: $color-grey-light;
@@ -12,6 +11,7 @@
 .titre {
     width: 100%;
     display: flex;
+    align-items: center;
     margin: {
         top: 30px;
         bottom: 40px;
@@ -28,12 +28,14 @@
     }
     & .far {
         font-size: 35px;
-        z-index: 1;
         position: absolute;
-        right: 68%;
+        right: 70%;
+        z-index: 1;
     }
     & .fas {
-        @extend .far;
+        font-size: 35px;
+        position: absolute;
+        right: 70%;
         display: none;
     }
 }
