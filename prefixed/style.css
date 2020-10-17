@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Shand";
+  src: url("../menu/polices/Shrikhand-Regular.otf") format("otf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../menu/polices/Roboto-Medium.ttf") format("ttf");
+}
 html,
 body,
 div,
@@ -25,14 +33,6 @@ section {
   vertical-align: baseline;
 }
 
-@font-face {
-  font-family: "Shand";
-  src: url("menu/polices/Shrikhand-Regular.otf");
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("menu/polices/Roboto-Medium.ttf");
-}
 /*version ordi*/
 .button {
   width: 400px;
@@ -94,52 +94,103 @@ section {
   }
 }
 /*animation spinner*/
-.fa-spinner {
-  animation-name: spinner_rotate;
-  animation-iteration-count: 3;
-  animation-duration: 1000ms;
-  animation-fill-mode: forwards;
-  transform-origin: center;
+.spinner {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: disparition 400ms both 2600ms;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
 }
 
-@keyframes spinner_rotate {
+.spin-cercle-1, .spin-cercle-3, .spin-cercle-2 {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 90px solid #fff;
+  border-right: 90px solid #9356dc;
+  transform-origin: center;
+  animation: rotate-1 3000ms both;
+  position: absolute;
+  margin: auto;
+}
+.spin-cercle-2 {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 68px solid #fff;
+  border-right: 68px solid #ff79da;
+  animation: rotate-1 3000ms both 300ms;
+}
+.spin-cercle-3 {
+  width: 305px;
+  height: 305px;
+  border-radius: 50%;
+  border: 45px solid #fff;
+  border-right: 45px solid #99e2d0;
+  animation: rotate-1 3000ms both 600ms;
+}
+
+@keyframes rotate-1 {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(1080deg);
   }
 }
-.construction {
-  position: absolute;
-  animation: position_spinner 2000ms forwards 1000ms;
-  font-family: "Shand", sans-serif;
-}
-
-@keyframes position_spinner {
+@keyframes disparition {
   0% {
     opacity: 1;
   }
-  97% {
+  90% {
     opacity: 1;
   }
   100% {
     opacity: 0;
   }
 }
-.restaurant {
-  animation: restoconstruction 2000ms backwards 1000ms;
+@media screen and (max-width: 767px) {
+  .spin-cercle-1, .spin-cercle-2, .spin-cercle-3 {
+    width: 90px;
+    height: 90px;
+    border: 40px solid #fff;
+    border-right: 40px solid #9356dc;
+  }
+  .spin-cercle-2 {
+    width: 70px;
+    height: 70px;
+    border: 30px solid #fff;
+    border-right: 30px solid #ff79da;
+  }
+  .spin-cercle-3 {
+    width: 45px;
+    height: 45px;
+    border: 20px solid #fff;
+    border-right: 20px solid #99e2d0;
+  }
 }
-
-@keyframes restoconstruction {
-  0% {
-    opacity: 0;
+@media (min-width: 768px) and (max-width: 991px) {
+  .spin-cercle-1, .spin-cercle-2, .spin-cercle-3 {
+    width: 200px;
+    height: 200px;
+    border: 45px solid #fff;
+    border-right: 45px solid #9356dc;
   }
-  97% {
-    opacity: 0;
+  .spin-cercle-2 {
+    width: 175px;
+    height: 175px;
+    border: 34px solid #fff;
+    border-right: 34px solid #ff79da;
   }
-  100% {
-    opacity: 1;
+  .spin-cercle-3 {
+    width: 150px;
+    height: 150px;
+    border: 23px solid #fff;
+    border-right: 23px solid #99e2d0;
   }
 }
 /*version ordi*/
@@ -485,7 +536,6 @@ section a {
     font-size: 23px;
     margin-left: 20px;
     margin-top: 30px;
-    margin-bottom: -30px;
   }
   section .restaurant {
     width: 90%;
@@ -541,6 +591,7 @@ section a {
   .construction {
     font-size: 30px;
     top: 150px;
+    display: none;
   }
   .construction i {
     margin-left: 20px;

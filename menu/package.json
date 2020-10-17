@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main-1.scss:./style-1.css",
-    "prefix": "postcss ./style-1.css --use autoprefixer -d ./prefixed/"
+    "sass": "sass --watch ./sass/main-1.scss:./prefixed/style-1.css",
+    "prefix": "postcss ./style-1.css --use autoprefixer -d ./prefixed"
   },
   "author": "",
   "license": "ISC",

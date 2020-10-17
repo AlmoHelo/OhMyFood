@@ -95,7 +95,6 @@ section {
         padding-bottom: 30px;
         & h2 {
             @include titreh2mobile;
-            margin-bottom: -30px;
         }
         & .restaurant {
             width: 90%;
@@ -140,6 +139,7 @@ section {
     .construction {
         font-size: 30px;
         top: 150px;
+        display: none;
         & i {
             margin-left: 20px;
             margin-right: 10px;

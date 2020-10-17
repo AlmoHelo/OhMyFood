@@ -154,12 +154,9 @@ span {
         }
     }
 }
-@keyframes plat {
+@keyframes block {
     0% {
-        width: 110%;
-    }
-    100% {
-        width: 75%;
+        transform: translateX(100%);
     }
 }
 @keyframes ok {
@@ -170,11 +167,15 @@ span {
         transform: rotate(360deg);
     }
 }
-@keyframes block {
+@keyframes plat {
     0% {
-        transform: translateX(100%);
+        width: 110%;
+    }
+    100% {
+        width: 75%;
     }
 }
+
 @keyframes prix {
     0% {
         width: 380px;
