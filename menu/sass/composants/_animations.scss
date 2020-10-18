@@ -38,10 +38,7 @@
 /*animation menu*/
 .liste {
     transform-origin: bottom;
-    animation-name: liste;
-    animation-duration: 2000ms;
-    animation-fill-mode: both;
-    animation-delay: 500ms;
+    animation: liste 2000ms both 500ms;
 }
 @keyframes liste {
     0% {
@@ -55,27 +52,23 @@
     }
 }
 .anim {
-    animation-name: animation-liste;
+    animation: animation-liste both;
     transform-origin: bottom;
     animation-duration: 800ms;
-    animation-fill-mode: both;
     &_2 {
-        animation-name: animation-liste;
+        animation: animation-liste both;
         transform-origin: bottom;
         animation-duration: 1000ms;
-        animation-fill-mode: both;
     }
     &_3 {
-        animation-name: animation-liste;
+        animation: animation-liste both;
         transform-origin: bottom;
         animation-duration: 1200ms;
-        animation-fill-mode: both;
     }
     &_4 {
-        animation-name: animation-liste;
+        animation: animation-liste both;
         transform-origin: bottom;
         animation-duration: 1400ms;
-        animation-fill-mode: both;
     }
 }
 @keyframes animation-liste {
@@ -117,17 +110,12 @@ span {
             justify-content: center;
             line-height: 80px;
             font-size: 22px;
-            animation-name: ok;
-            animation-duration: 600ms;
-            animation-delay: 100ms;
+            animation-name: ok 600ms 100ms;
             color: $color-white;
         }
     }
     & .texte_2 {
-        animation-name: prix;
-        animation-duration: 800ms;
-        animation-fill-mode: forwards;
-        transition-timing-function: ease-in-out;
+        animation: prix 800ms forwards ease-in-out;
         margin-right: 10px;
         &_couper {
             text-overflow: ellipsis;
@@ -143,10 +131,7 @@ span {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        animation-name: plat;
-        animation-duration: 800ms;
-        animation-fill-mode: forwards;
-        transition-timing-function: ease-in-out;
+        animation: plat 800ms forwards ease-in-out;
         &--modifier {
             padding: 0;
             margin-right: 0;
@@ -184,8 +169,7 @@ span {
     }
 }
 @media screen and (max-width: map-get($breakpoint, mobile)) {
-    .clic:hover {
-        /*animation par ligne version mobile*/
+    .clic:hover {                                  /*animation par ligne version mobile*/
         & .texte_2 {
             animation-name: prix-mobile;
         }
@@ -200,8 +184,7 @@ span {
     }
 }
 @media (min-width: map-get($breakpoint, littletablette)) and (max-width: map-get($breakpoint, bigtablette)) {
-    .clic:hover {
-        /*animation par ligne version mobile*/
+    .clic:hover {                                /*animation par ligne version mobile*/
         & .texte_2 {
             animation-name: prix-tablette;
         }

@@ -38,6 +38,7 @@ section {
   font-family: "Roboto", "trebuchet MS", sans-serif;
   width: 200px;
   height: 40px;
+  margin-left: 30px;
   margin-bottom: 40px;
   border-radius: 35px;
   color: #fff;
@@ -112,10 +113,7 @@ section {
 /*animation menu*/
 .liste {
   transform-origin: bottom;
-  animation-name: liste;
-  animation-duration: 2000ms;
-  animation-fill-mode: both;
-  animation-delay: 500ms;
+  animation: liste 2000ms both 500ms;
 }
 
 @keyframes liste {
@@ -130,28 +128,24 @@ section {
   }
 }
 .anim {
-  animation-name: animation-liste;
+  animation: animation-liste both;
   transform-origin: bottom;
   animation-duration: 800ms;
-  animation-fill-mode: both;
 }
 .anim_2 {
-  animation-name: animation-liste;
+  animation: animation-liste both;
   transform-origin: bottom;
   animation-duration: 1000ms;
-  animation-fill-mode: both;
 }
 .anim_3 {
-  animation-name: animation-liste;
+  animation: animation-liste both;
   transform-origin: bottom;
   animation-duration: 1200ms;
-  animation-fill-mode: both;
 }
 .anim_4 {
-  animation-name: animation-liste;
+  animation: animation-liste both;
   transform-origin: bottom;
   animation-duration: 1400ms;
-  animation-fill-mode: both;
 }
 
 @keyframes animation-liste {
@@ -196,16 +190,11 @@ span {
   justify-content: center;
   line-height: 80px;
   font-size: 22px;
-  animation-name: ok;
-  animation-duration: 600ms;
-  animation-delay: 100ms;
+  animation-name: ok 600ms 100ms;
   color: #fff;
 }
 .clic:hover .texte_2 {
-  animation-name: prix;
-  animation-duration: 800ms;
-  animation-fill-mode: forwards;
-  transition-timing-function: ease-in-out;
+  animation: prix 800ms forwards ease-in-out;
   margin-right: 10px;
 }
 .clic:hover .texte_2_couper {
@@ -221,10 +210,7 @@ span {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  animation-name: plat;
-  animation-duration: 800ms;
-  animation-fill-mode: forwards;
-  transition-timing-function: ease-in-out;
+  animation: plat 800ms forwards ease-in-out;
 }
 .clic:hover .texte_gras--modifier {
   padding: 0;
@@ -383,7 +369,7 @@ header {
 .repas {
   width: 30%;
   font-family: "Roboto", "trebuchet MS", sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   margin-left: 20px;
 }
 .repas h2 {
