@@ -87,14 +87,9 @@
     }
 }
 @keyframes disparition {
-    0% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
     100% {
-        opacity: 0;
+        position: relative;
+        top: -500px;
     }
 }
 @media screen and (max-width: map-get($breakpoint, mobile)) {
