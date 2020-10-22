@@ -141,8 +141,8 @@ section {
   -webkit-animation: disparition 400ms both 2600ms;
           animation: disparition 400ms both 2600ms;
   width: 100%;
-  height: 100%;
-  z-index: 1;
+  height: 170%;
+  z-index: 2;
   position: absolute;
 }
 
