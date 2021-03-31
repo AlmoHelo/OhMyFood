@@ -42,3 +42,8 @@
   </ul>
   
 <h2>Tester le projet</h2>
+<ul>
+  <li>Cloner le projet : https://github.com/AlmoHelo/OhMyFood.git </li>
+  <li>Exécuter : npm install </li>
+  <li>Exécuter npm run sass </li>
+  </ul>
