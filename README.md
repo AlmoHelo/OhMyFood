@@ -47,3 +47,4 @@
   <li>Exécuter : npm install </li>
   <li>Exécuter npm run sass </li>
   </ul>
+ Copyright©2021 <a href="https://github.com/AlmoHelo">Almoyner Héloïse</a>
