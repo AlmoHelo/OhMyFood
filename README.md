@@ -40,3 +40,5 @@
   <li> Le code doit passer le validateur W3C</li>
   <li> Le site doit être compatible avec Chrome, Firefox et Safari. </li>
   </ul>
+  
+<h2>Tester le projet</h2>
